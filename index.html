@@ -22,14 +22,7 @@
     }
     *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
     html,body{width:100%;min-height:100%;overflow-x:hidden;}
-    body{
-      background:var(--bg);
-      background-image:
-        radial-gradient(ellipse 80% 40% at 50% 0%,rgba(255,45,110,.13) 0%,transparent 60%),
-        radial-gradient(ellipse 50% 40% at 90% 80%,rgba(0,229,255,.08) 0%,transparent 50%),
-        radial-gradient(ellipse 40% 40% at 5% 60%,rgba(185,79,255,.06) 0%,transparent 50%);
-      font-family:var(--font-ui);color:var(--white);
-    }
+    body{background:var(--bg);background-image:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(255,45,110,.13) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 90% 80%,rgba(0,229,255,.08) 0%,transparent 50%),radial-gradient(ellipse 40% 40% at 5% 60%,rgba(185,79,255,.06) 0%,transparent 50%);font-family:var(--font-ui);color:var(--white);}
     #particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
     .particle{position:absolute;border-radius:50%;animation:floatP linear infinite;opacity:0;}
     @keyframes floatP{0%{transform:translateY(100vh) scale(0);opacity:0;}10%{opacity:.7;}90%{opacity:.3;}100%{transform:translateY(-10vh) scale(1);opacity:0;}}
@@ -87,7 +80,7 @@
     .card-food{--ca:#ff2d6e;--ca2:#ff9a3c;}
     .card-drinks{--ca:#00e5ff;--ca2:#00ff99;}
     .card-smoke{--ca:#b94fff;--ca2:#ff2d6e;}
-       .product-emoji{font-size:1.85rem;margin-bottom:.28rem;filter:drop-shadow(0 0 7px rgba(255,255,255,.25));transition:opacity .3s;}
+    .product-emoji{font-size:1.85rem;margin-bottom:.28rem;filter:drop-shadow(0 0 7px rgba(255,255,255,.25));transition:opacity .3s;}
     .product-name{font-size:.84rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:.12rem;transition:opacity .3s;}
     .product-desc{font-size:.62rem;color:var(--muted);margin-bottom:.45rem;line-height:1.3;transition:opacity .3s;}
     .product-price{font-family:var(--font-clock);font-size:.95rem;font-weight:700;color:var(--white);transition:opacity .3s;}
@@ -172,19 +165,6 @@
     .cartel-cierre.activo{opacity:1;pointer-events:all;}
     .cartel-cierre h2{font-family:var(--font-title);font-size:clamp(1.8rem,8.5vw,3rem);color:#ff5555;text-shadow:0 0 25px #ff0000;text-align:center;letter-spacing:.05em;padding:0 1rem;}
     .cartel-cierre p{color:var(--muted);font-size:.8rem;margin-top:.65rem;letter-spacing:.18em;text-transform:uppercase;}
-    /* ══ GOJO ══ */
-    .gojo-wrapper{position:fixed !important;bottom:calc(var(--nav-h) + 12px);right:10px;z-index:500;width:78px !important;pointer-events:none;opacity:0;transform:translateY(24px) scale(.82);transition:opacity .55s cubic-bezier(.34,1.56,.64,1),transform .55s cubic-bezier(.34,1.56,.64,1);}
-    .gojo-wrapper.visible{opacity:1;transform:translateY(0) scale(1);pointer-events:all;cursor:pointer;}
-    .gojo-wrapper.visible .gojo-svg{animation:gojoFloat 3s ease-in-out infinite;}
-    @keyframes gojoFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
-    @keyframes gojoGlow{0%,100%{filter:drop-shadow(0 0 6px rgba(0,229,255,.9)) drop-shadow(0 0 14px rgba(185,79,255,.6));}50%{filter:drop-shadow(0 0 12px rgba(0,229,255,1)) drop-shadow(0 0 26px rgba(185,79,255,1)) drop-shadow(0 0 38px rgba(255,45,110,.5));}}
-    .gojo-svg{display:block !important;width:78px !important;height:104px !important;max-width:78px !important;filter:drop-shadow(0 0 8px rgba(0,229,255,.8)) drop-shadow(0 0 18px rgba(185,79,255,.6));animation:gojoGlow 2.8s ease-in-out infinite;}
-    .gojo-bubble{position:absolute;bottom:108px;right:0;background:linear-gradient(135deg,rgba(4,1,16,.98),rgba(8,4,26,.98));border:1.5px solid rgba(0,229,255,.6);border-radius:12px 12px 3px 12px;padding:.45rem .8rem;font-size:.65rem;color:#fff;letter-spacing:.03em;font-family:var(--font-ui);font-weight:700;box-shadow:0 0 16px rgba(0,229,255,.35),0 6px 24px rgba(0,0,0,.7);width:195px;white-space:normal;text-align:right;line-height:1.45;}
-    .gojo-bubble::after{content:'';position:absolute;bottom:-7px;right:16px;border-left:7px solid transparent;border-right:0 solid transparent;border-top:7px solid rgba(0,229,255,.6);}
-    .gojo-bubble .bubble-name{display:block;font-size:.5rem;color:var(--cyan);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.18rem;opacity:.75;font-weight:600;}
-    @keyframes bubbleIn{from{opacity:0;transform:scale(.8) translateY(10px);}to{opacity:1;transform:scale(1) translateY(0);}}
-    .gojo-wrapper.visible .gojo-bubble{animation:bubbleIn .4s cubic-bezier(.34,1.56,.64,1) both;}
-    /* ══ ANDINAS ══ */
     .andinas-badge{display:inline-flex;align-items:center;gap:.42rem;cursor:pointer;transition:all .3s;white-space:nowrap;background:rgba(0,0,0,.5);border:1px solid rgba(255,215,0,.3);border-radius:50px;padding:.48rem 1.1rem;}
     .andinas-badge:hover{border-color:var(--gold);box-shadow:0 0 20px rgba(255,215,0,.3);transform:scale(1.05);}
     .andinas-badge:active{transform:scale(.96);}
@@ -194,10 +174,13 @@
     .andinas-text{font-family:var(--font-ui);font-size:.65rem;font-weight:700;color:var(--gold);letter-spacing:.13em;text-transform:uppercase;}
     .confeti-piece{position:fixed;top:-10px;z-index:9998;pointer-events:none;animation:confetiFall linear forwards;}
     @keyframes confetiFall{0%{transform:translateY(0) rotate(0) scaleX(1);opacity:1;}70%{opacity:1;}100%{transform:translateY(100vh) rotate(720deg) scaleX(-1);opacity:0;}}
-    /* ══ ADMIN ══ */
+
+    /* ══ ADMIN BTN ══ */
     #adminBtn{position:fixed !important;bottom:calc(var(--nav-h) + 8px);left:12px;z-index:800;background:rgba(0,0,0,.82);border:1px solid rgba(255,255,255,.15);border-radius:50%;width:38px;height:38px;display:none;align-items:center;justify-content:center;cursor:pointer;color:var(--muted);font-size:.78rem;transition:all .3s;box-shadow:0 2px 12px rgba(0,0,0,.5);}
     #adminBtn.show{display:flex !important;}
     #adminBtn:hover{border-color:var(--pink);color:var(--pink);}
+
+    /* ══ ADMIN LOGIN ══ */
     .admin-overlay{position:fixed !important;inset:0 !important;background:rgba(0,0,0,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:9000 !important;display:none;align-items:center;justify-content:center;}
     .admin-overlay.show{display:flex !important;}
     .admin-login-box{background:rgba(10,14,24,1);border:1px solid rgba(255,45,110,.4);border-radius:1.4rem;padding:1.8rem 1.5rem;width:88vw;max-width:320px;text-align:center;box-shadow:0 0 40px rgba(255,45,110,.15),0 20px 60px rgba(0,0,0,.8);}
@@ -210,15 +193,37 @@
     .btn-admin-login{background:linear-gradient(135deg,rgba(255,45,110,.25),rgba(185,79,255,.18));border:1px solid rgba(255,45,110,.5);border-radius:50px;color:var(--pink);font-family:var(--font-ui);font-size:.88rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;padding:.68rem 1.8rem;cursor:pointer;width:100%;transition:all .25s;margin-bottom:.45rem;}
     .btn-admin-login:hover{box-shadow:0 0 20px rgba(255,45,110,.35);}
     .btn-admin-cancel{background:none;border:none;color:var(--muted);font-family:var(--font-ui);font-size:.72rem;cursor:pointer;letter-spacing:.07em;text-transform:uppercase;padding:.3rem;}
+
+    /* ══ ADMIN PANEL ══ */
     .admin-panel{position:fixed !important;inset:0 !important;background:rgba(4,2,10,.99);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:9100 !important;overflow-y:auto;display:none;flex-direction:column;}
     .admin-panel.show{display:flex !important;}
     .admin-header{background:rgba(255,45,110,.1);border-bottom:1px solid rgba(255,45,110,.25);padding:1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);}
     .admin-header h2{font-family:var(--font-title);font-size:1.4rem;color:var(--pink);letter-spacing:.1em;text-shadow:0 0 12px rgba(255,45,110,.4);}
     .btn-admin-close{background:none;border:1px solid rgba(255,255,255,.15);border-radius:.45rem;color:var(--muted);font-family:var(--font-ui);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;padding:.34rem .7rem;cursor:pointer;transition:all .2s;}
     .btn-admin-close:hover{border-color:var(--red);color:var(--red);}
-    .admin-body{padding:1rem 1rem 3rem;display:flex;flex-direction:column;gap:1.2rem;max-width:480px;margin:0 auto;width:100%;}
-    .admin-card{background:rgba(10,14,22,.9);border:1px solid rgba(255,255,255,.08);border-radius:1.1rem;padding:1.1rem;box-shadow:0 4px 20px rgba(0,0,0,.3);}
-    .admin-card-title{font-family:var(--font-title);font-size:1.15rem;letter-spacing:.08em;margin-bottom:.9rem;display:flex;align-items:center;gap:.45rem;}
+    .admin-body{padding:.7rem .8rem 3rem;display:flex;flex-direction:column;gap:.6rem;max-width:480px;margin:0 auto;width:100%;}
+
+    /* Admin tabs */
+    .admin-tabs{display:flex;gap:.4rem;margin-bottom:.2rem;overflow-x:auto;padding-bottom:.2rem;scrollbar-width:none;}
+    .admin-tabs::-webkit-scrollbar{display:none;}
+    .admin-tab-btn{flex-shrink:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:.65rem;color:var(--muted);font-family:var(--font-ui);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.5rem .9rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:.35rem;}
+    .admin-tab-btn.active{background:rgba(255,45,110,.12);border-color:rgba(255,45,110,.45);color:var(--pink);}
+    .admin-tab-btn i{font-size:.8rem;}
+    .admin-tab-panel{display:none;flex-direction:column;gap:.9rem;}
+    .admin-tab-panel.active{display:flex;}
+
+    /* Admin cards */
+    .admin-card{background:rgba(10,14,22,.9);border:1px solid rgba(255,255,255,.08);border-radius:1.1rem;padding:1rem;box-shadow:0 4px 20px rgba(0,0,0,.3);}
+    .admin-card-title{font-family:var(--font-title);font-size:1.1rem;letter-spacing:.08em;margin-bottom:.85rem;display:flex;align-items:center;gap:.45rem;}
+    .admin-card-subtitle{font-size:.62rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem;}
+
+    /* Stats */
+    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
+    .stat-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:.75rem;padding:.7rem;text-align:center;}
+    .stat-num{font-family:var(--font-clock);font-size:1.25rem;font-weight:700;color:var(--cyan);}
+    .stat-lbl{font-size:.56rem;letter-spacing:.11em;color:var(--muted);text-transform:uppercase;margin-top:3px;}
+
+    /* Agotados */
     .agotado-list{display:flex;flex-direction:column;gap:.5rem;}
     .agotado-row{display:flex;align-items:center;justify-content:space-between;padding:.45rem .65rem;background:rgba(255,255,255,.03);border-radius:.65rem;border:1px solid rgba(255,255,255,.06);}
     .agotado-row span{font-size:.78rem;color:var(--white);display:flex;align-items:center;gap:.35rem;}
@@ -228,24 +233,34 @@
     .toggle-slider::before{content:'';position:absolute;width:17px;height:17px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;}
     .toggle-switch input:checked+.toggle-slider{background:var(--red);}
     .toggle-switch input:checked+.toggle-slider::before{transform:translateX(19px);}
-    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
-    .stat-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:.75rem;padding:.7rem;text-align:center;}
-    .stat-num{font-family:var(--font-clock);font-size:1.25rem;font-weight:700;color:var(--cyan);}
-    .stat-lbl{font-size:.56rem;letter-spacing:.11em;color:var(--muted);text-transform:uppercase;margin-top:3px;}
+
+    /* Form inputs */
     .admin-input{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:.75rem;padding:.65rem .9rem;color:var(--white);font-family:var(--font-ui);font-size:16px;width:100%;outline:none;transition:border .2s;margin-bottom:.65rem;}
     .admin-input:focus{border-color:rgba(37,211,102,.55);}
     .admin-textarea{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:.75rem;padding:.65rem .9rem;color:var(--white);font-family:var(--font-ui);font-size:16px;width:100%;outline:none;transition:border .2s;margin-bottom:.65rem;resize:vertical;min-height:72px;}
     .admin-textarea:focus{border-color:rgba(0,229,255,.55);}
+    .admin-select{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:.75rem;padding:.65rem .9rem;color:var(--white);font-family:var(--font-ui);font-size:16px;width:100%;outline:none;transition:border .2s;margin-bottom:.65rem;appearance:none;-webkit-appearance:none;}
+    .admin-select:focus{border-color:rgba(0,229,255,.55);}
+    .admin-select option{background:#0a0e16;color:var(--white);}
+
+        /* Buttons */
     .btn-admin-save{background:linear-gradient(135deg,rgba(0,255,99,.15),rgba(0,229,255,.1));border:1px solid rgba(0,255,99,.45);border-radius:50px;color:var(--green);font-family:var(--font-ui);font-size:.82rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;padding:.55rem 1.4rem;cursor:pointer;transition:all .25s;}
     .btn-admin-save:hover{box-shadow:0 0 14px rgba(0,255,99,.35);}
+    .btn-admin-red{background:linear-gradient(135deg,rgba(255,68,68,.15),rgba(255,45,110,.1));border:1px solid rgba(255,68,68,.45);border-radius:50px;color:var(--red);font-family:var(--font-ui);font-size:.82rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;padding:.55rem 1.4rem;cursor:pointer;transition:all .25s;}
+    .btn-admin-red:hover{box-shadow:0 0 14px rgba(255,68,68,.35);}
+    .btn-admin-cyan{background:linear-gradient(135deg,rgba(0,229,255,.15),rgba(185,79,255,.1));border:1px solid rgba(0,229,255,.45);border-radius:50px;color:var(--cyan);font-family:var(--font-ui);font-size:.82rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;padding:.55rem 1.4rem;cursor:pointer;transition:all .25s;}
+    .btn-admin-cyan:hover{box-shadow:0 0 14px rgba(0,229,255,.35);}
+    .btn-admin-gold{background:linear-gradient(135deg,rgba(255,215,0,.15),rgba(255,154,60,.1));border:1px solid rgba(255,215,0,.45);border-radius:50px;color:var(--gold);font-family:var(--font-ui);font-size:.82rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;padding:.55rem 1.4rem;cursor:pointer;transition:all .25s;}
+    .btn-admin-gold:hover{box-shadow:0 0 14px rgba(255,215,0,.35);}
+    .btn-row{display:flex;gap:.5rem;flex-wrap:wrap;}
     .admin-save-ok{color:var(--green);font-size:.7rem;letter-spacing:.07em;display:none;margin-top:.45rem;}
     .admin-save-ok.show{display:block;}
     .horario-row{display:flex;gap:.55rem;align-items:center;margin-bottom:.65rem;}
     .horario-row label{font-size:.68rem;color:var(--muted);letter-spacing:.07em;text-transform:uppercase;min-width:60px;}
     .horario-row input[type=time]{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:.55rem;padding:.44rem .75rem;color:var(--white);font-family:var(--font-clock);font-size:.82rem;outline:none;transition:border .2s;width:130px;}
     .horario-row input[type=time]:focus{border-color:rgba(0,229,255,.55);}
-    .btn-admin-red{background:linear-gradient(135deg,rgba(255,68,68,.15),rgba(255,45,110,.1));border:1px solid rgba(255,68,68,.45);border-radius:50px;color:var(--red);font-family:var(--font-ui);font-size:.82rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;padding:.55rem 1.4rem;cursor:pointer;transition:all .25s;}
-    .btn-admin-red:hover{box-shadow:0 0 14px rgba(255,68,68,.35);}
+
+    /* Eventos admin */
     .admin-file-label{display:block;background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.22);border-radius:.75rem;padding:.65rem .9rem;color:var(--muted);font-family:var(--font-ui);font-size:.78rem;cursor:pointer;text-align:center;margin-bottom:.65rem;transition:border .2s;}
     .admin-file-label:hover{border-color:rgba(0,229,255,.45);color:var(--cyan);}
     #adminEventoImg,#editEventoImg{display:none;}
@@ -268,7 +283,77 @@
     .edit-modal-btns{display:flex;gap:.48rem;margin-top:.3rem;}
     .btn-edit-save{flex:1;background:linear-gradient(135deg,rgba(0,229,255,.18),rgba(0,255,99,.1));border:1px solid rgba(0,229,255,.5);border-radius:50px;color:var(--cyan);font-family:var(--font-ui);font-size:.82rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;padding:.55rem;cursor:pointer;transition:all .25s;}
     .btn-edit-cancel{flex:1;background:none;border:1px solid rgba(255,255,255,.14);border-radius:50px;color:var(--muted);font-family:var(--font-ui);font-size:.82rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;padding:.55rem;cursor:pointer;transition:all .25s;}
-    ::-webkit-scrollbar{width:3px;}
+
+    /* ══ FINANZAS ══ */
+    .fin-kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;}
+    .fin-kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:.9rem;padding:.75rem .7rem;text-align:center;position:relative;overflow:hidden;}
+    .fin-kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;border-radius:2px;}
+    .fin-kpi.kpi-green::before{background:var(--green);}
+    .fin-kpi.kpi-red::before{background:var(--red);}
+    .fin-kpi.kpi-gold::before{background:var(--gold);}
+    .fin-kpi.kpi-cyan::before{background:var(--cyan);}
+    .fin-kpi.kpi-purple::before{background:var(--purple);}
+    .fin-kpi-val{font-family:var(--font-clock);font-size:1.1rem;font-weight:700;line-height:1.1;}
+    .fin-kpi-val.green{color:var(--green);}
+    .fin-kpi-val.red{color:var(--red);}
+    .fin-kpi-val.gold{color:var(--gold);}
+    .fin-kpi-val.cyan{color:var(--cyan);}
+    .fin-kpi-val.purple{color:var(--purple);}
+    .fin-kpi-lbl{font-size:.54rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:3px;line-height:1.3;}
+    .fin-form-row{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.65rem;}
+    .fin-form-row label{font-size:.62rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-weight:700;}
+    .fin-input-row{display:flex;gap:.5rem;}
+    .fin-input-row .admin-input{margin-bottom:0;flex:1;}
+    .fin-input-row .admin-select{margin-bottom:0;flex:1;}
+    .fin-tabla-wrap{overflow-x:auto;margin-top:.3rem;border-radius:.75rem;border:1px solid rgba(255,255,255,.07);}
+    .fin-tabla{width:100%;border-collapse:collapse;font-size:.68rem;}
+    .fin-tabla th{background:rgba(255,255,255,.06);color:var(--muted);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;padding:.5rem .6rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.07);}
+    .fin-tabla td{padding:.52rem .6rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--white);vertical-align:top;}
+    .fin-tabla tr:last-child td{border-bottom:none;}
+    .fin-tabla tr:hover td{background:rgba(255,255,255,.02);}
+    .fin-tabla .num{font-family:var(--font-clock);font-size:.7rem;}
+    .fin-tabla .pos{color:var(--green);}
+    .fin-tabla .neg{color:var(--red);}
+    .fin-tabla .gold{color:var(--gold);}
+    .fin-tabla .cyan{color:var(--cyan);}
+    .fin-badge{display:inline-block;border-radius:50px;padding:.1rem .45rem;font-size:.54rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;}
+    .fin-badge.ingreso{background:rgba(0,255,99,.1);color:var(--green);border:1px solid rgba(0,255,99,.3);}
+    .fin-badge.gasto{background:rgba(255,68,68,.1);color:var(--red);border:1px solid rgba(255,68,68,.3);}
+    .fin-badge.inversion{background:rgba(255,215,0,.1);color:var(--gold);border:1px solid rgba(255,215,0,.3);}
+    .fin-del-btn{background:none;border:none;color:rgba(255,68,68,.5);font-size:.75rem;cursor:pointer;padding:.1rem .3rem;border-radius:.3rem;transition:color .2s;}
+    .fin-del-btn:hover{color:var(--red);}
+    .fin-empty{text-align:center;padding:1.5rem;color:var(--muted);font-size:.72rem;letter-spacing:.07em;}
+    .mes-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem;}
+    .mes-nav-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:.5rem;color:var(--white);font-size:.85rem;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+    .mes-nav-btn:hover{border-color:var(--cyan);color:var(--cyan);}
+    .mes-label{font-family:var(--font-title);font-size:1.05rem;letter-spacing:.1em;color:var(--white);}
+    .margen-bar{height:8px;border-radius:4px;background:rgba(255,255,255,.06);overflow:hidden;margin-top:.35rem;}
+    .margen-fill{height:100%;border-radius:4px;transition:width .6s ease;background:linear-gradient(90deg,var(--green),var(--cyan));}
+
+    /* Productos admin */
+    .prod-admin-list{display:flex;flex-direction:column;gap:.5rem;}
+    .prod-admin-row{display:flex;align-items:center;gap:.6rem;padding:.6rem .75rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:.75rem;}
+    .prod-admin-emoji{font-size:1.3rem;flex-shrink:0;}
+    .prod-admin-info{flex:1;min-width:0;}
+    .prod-admin-name{font-size:.8rem;font-weight:700;color:var(--white);}
+    .prod-admin-precio{font-family:var(--font-clock);font-size:.72rem;color:var(--cyan);}
+    .prod-precio-input{background:rgba(255,255,255,.08);border:1px solid rgba(0,229,255,.3);border-radius:.45rem;padding:.3rem .5rem;color:var(--white);font-family:var(--font-clock);font-size:.82rem;width:90px;outline:none;text-align:center;}
+    .prod-precio-input:focus{border-color:var(--cyan);}
+    .prod-save-btn{background:rgba(0,255,99,.12);border:1px solid rgba(0,255,99,.4);border-radius:.45rem;color:var(--green);font-size:.65rem;font-weight:700;letter-spacing:.07em;padding:.3rem .6rem;cursor:pointer;white-space:nowrap;transition:all .2s;}
+    .prod-save-btn:hover{box-shadow:0 0 10px rgba(0,255,99,.3);}
+    .prod-cost-input{background:rgba(255,255,255,.06);border:1px solid rgba(255,215,0,.25);border-radius:.45rem;padding:.3rem .5rem;color:var(--gold);font-family:var(--font-clock);font-size:.72rem;width:80px;outline:none;text-align:center;}
+    .prod-cost-input:focus{border-color:var(--gold);}
+
+    /* Backup */
+    .backup-info{font-size:.72rem;color:var(--muted);line-height:1.7;margin-bottom:.9rem;}
+    .backup-info strong{color:var(--white);}
+    .backup-dropzone{border:2px dashed rgba(0,229,255,.3);border-radius:.9rem;padding:1.2rem;text-align:center;cursor:pointer;transition:all .3s;background:rgba(0,229,255,.03);}
+    .backup-dropzone:hover{border-color:var(--cyan);background:rgba(0,229,255,.06);}
+    .backup-dropzone i{font-size:1.6rem;color:var(--cyan);margin-bottom:.4rem;display:block;}
+    .backup-dropzone span{font-size:.72rem;color:var(--muted);display:block;}
+    #backupFileInput{display:none;}
+
+        ::-webkit-scrollbar{width:3px;}
     ::-webkit-scrollbar-track{background:var(--bg);}
     ::-webkit-scrollbar-thumb{background:var(--pink);border-radius:2px;}
     html{scroll-behavior:smooth;}
@@ -300,19 +385,19 @@
     <div class="notif-horario" id="notifHorario"><i class="fas fa-clock"></i><span id="notifTexto"></span></div>
     <div class="section-label">✦ Menú del día ✦</div>
     <div class="menu-grid" id="menuGrid">
-      <div class="product-card card-coffee" data-id="cafe"><span class="agotado-tag">Agotado</span><div class="product-emoji">☕</div><div class="product-name">Café</div><div class="product-desc">negro / americano</div><div class="product-price">20 <span class="cup">CUP</span></div></div>
-      <div class="product-card card-coffee" data-id="cortado"><span class="agotado-tag">Agotado</span><div class="product-emoji">☕</div><div class="product-name">Cortado</div><div class="product-desc">café + leche condensada</div><div class="product-price">30 <span class="cup">CUP</span></div></div>
-      <div class="product-card card-food" data-id="pizza"><span class="agotado-tag">Agotado</span><div class="product-emoji">🍕</div><div class="product-name">Pizza de queso</div><div class="product-desc">mozzarella, orégano</div><div class="product-price">130 <span class="cup">CUP</span></div></div>
-      <div class="product-card card-food" data-id="salchicha"><span class="agotado-tag">Agotado</span><div class="product-emoji">🌭</div><div class="product-name">Pan con salchicha</div><div class="product-desc">salchicha tipo frankfurt</div><div class="product-price">120 <span class="cup">CUP</span></div></div>
-      <div class="product-card card-food" data-id="minuta"><span class="agotado-tag">Agotado</span><div class="product-emoji">🍔</div><div class="product-name">Pan con minuta</div><div class="product-desc">milanesa de carne</div><div class="product-price">200 <span class="cup">CUP</span></div></div>
-      <div class="product-card card-drinks" data-id="refresco"><span class="agotado-tag">Agotado</span><div class="product-emoji">🥤</div><div class="product-name">Refresco de vaso</div><div class="product-desc">cola / naranja / limón</div><div class="product-price">20 <span class="cup">CUP</span></div></div>
-      <div class="product-card card-smoke" data-id="rojo"><span class="agotado-tag">Agotado</span><div class="product-emoji">🚬</div><div class="product-name">Popular Rojo</div><div class="product-desc">cigarro · fuerte</div><div class="product-price">30 <span class="cup">CUP</span></div></div>
-      <div class="product-card card-smoke" data-id="mondeo"><span class="agotado-tag">Agotado</span><div class="product-emoji">🚬</div><div class="product-name">Mondeo</div><div class="product-desc">cigarro · suave</div><div class="product-price">30 <span class="cup">CUP</span></div></div>
+      <div class="product-card card-coffee" data-id="cafe"><span class="agotado-tag">Agotado</span><div class="product-emoji">☕</div><div class="product-name">Café</div><div class="product-desc">negro / americano</div><div class="product-price" id="precio-cafe">20 <span class="cup">CUP</span></div></div>
+      <div class="product-card card-coffee" data-id="cortado"><span class="agotado-tag">Agotado</span><div class="product-emoji">☕</div><div class="product-name">Cortado</div><div class="product-desc">café + leche condensada</div><div class="product-price" id="precio-cortado">30 <span class="cup">CUP</span></div></div>
+      <div class="product-card card-food" data-id="pizza"><span class="agotado-tag">Agotado</span><div class="product-emoji">🍕</div><div class="product-name">Pizza de queso</div><div class="product-desc">mozzarella, orégano</div><div class="product-price" id="precio-pizza">130 <span class="cup">CUP</span></div></div>
+      <div class="product-card card-food" data-id="salchicha"><span class="agotado-tag">Agotado</span><div class="product-emoji">🌭</div><div class="product-name">Pan con salchicha</div><div class="product-desc">salchicha tipo frankfurt</div><div class="product-price" id="precio-salchicha">120 <span class="cup">CUP</span></div></div>
+      <div class="product-card card-food" data-id="minuta"><span class="agotado-tag">Agotado</span><div class="product-emoji">🍔</div><div class="product-name">Pan con minuta</div><div class="product-desc">milanesa de carne</div><div class="product-price" id="precio-minuta">200 <span class="cup">CUP</span></div></div>
+      <div class="product-card card-drinks" data-id="refresco"><span class="agotado-tag">Agotado</span><div class="product-emoji">🥤</div><div class="product-name">Refresco de vaso</div><div class="product-desc">cola / naranja / limón</div><div class="product-price" id="precio-refresco">20 <span class="cup">CUP</span></div></div>
+      <div class="product-card card-smoke" data-id="rojo"><span class="agotado-tag">Agotado</span><div class="product-emoji">🚬</div><div class="product-name">Popular Rojo</div><div class="product-desc">cigarro · fuerte</div><div class="product-price" id="precio-rojo">30 <span class="cup">CUP</span></div></div>
+      <div class="product-card card-smoke" data-id="mondeo"><span class="agotado-tag">Agotado</span><div class="product-emoji">🚬</div><div class="product-name">Mondeo</div><div class="product-desc">cigarro · suave</div><div class="product-price" id="precio-mondeo">30 <span class="cup">CUP</span></div></div>
     </div>
     <div class="andinas-footer"><div class="andinas-badge" id="andinasBadge"><span class="andinas-icon" id="andinasIcon">🏐</span><span class="andinas-text">Las andinas del Pedagógico</span></div></div>
   </section>
 
-    <section class="page-section" id="sec-domicilios">
+  <section class="page-section" id="sec-domicilios">
     <div class="page-hero"><span class="page-hero-icon">🛵</span><div class="page-hero-title">Domicilios</div><div class="page-hero-sub">Pide desde donde estás · Lo llevamos</div></div>
     <div class="domicilio-info"><strong>¿Cómo funciona?</strong><br>Selecciona productos, pon la cantidad, escribe tu dirección y envía el pedido por WhatsApp.</div>
     <div class="domicilio-toggle-btn" id="domToggleBtn">
@@ -324,16 +409,7 @@
         <div class="pedido-form">
           <div>
             <label class="pedido-label">¿Qué deseas pedir?</label>
-            <div class="pedido-items" id="pedidoItems">
-              <div class="pedido-item"><div class="pedido-item-top"><input type="checkbox" value="Café (20 CUP)"><span>☕ Café</span></div><div class="pedido-qty-row"><button class="qty-btn" data-action="minus">−</button><span class="qty-val">1</span><button class="qty-btn" data-action="plus">+</button></div></div>
-              <div class="pedido-item"><div class="pedido-item-top"><input type="checkbox" value="Cortado (30 CUP)"><span>☕ Cortado</span></div><div class="pedido-qty-row"><button class="qty-btn" data-action="minus">−</button><span class="qty-val">1</span><button class="qty-btn" data-action="plus">+</button></div></div>
-              <div class="pedido-item"><div class="pedido-item-top"><input type="checkbox" value="Pizza (130 CUP)"><span>🍕 Pizza</span></div><div class="pedido-qty-row"><button class="qty-btn" data-action="minus">−</button><span class="qty-val">1</span><button class="qty-btn" data-action="plus">+</button></div></div>
-              <div class="pedido-item"><div class="pedido-item-top"><input type="checkbox" value="Salchicha (120 CUP)"><span>🌭 Salchicha</span></div><div class="pedido-qty-row"><button class="qty-btn" data-action="minus">−</button><span class="qty-val">1</span><button class="qty-btn" data-action="plus">+</button></div></div>
-              <div class="pedido-item"><div class="pedido-item-top"><input type="checkbox" value="Minuta (200 CUP)"><span>🍔 Minuta</span></div><div class="pedido-qty-row"><button class="qty-btn" data-action="minus">−</button><span class="qty-val">1</span><button class="qty-btn" data-action="plus">+</button></div></div>
-              <div class="pedido-item"><div class="pedido-item-top"><input type="checkbox" value="Refresco (20 CUP)"><span>🥤 Refresco</span></div><div class="pedido-qty-row"><button class="qty-btn" data-action="minus">−</button><span class="qty-val">1</span><button class="qty-btn" data-action="plus">+</button></div></div>
-              <div class="pedido-item"><div class="pedido-item-top"><input type="checkbox" value="P. Rojo (30 CUP)"><span>🚬 P. Rojo</span></div><div class="pedido-qty-row"><button class="qty-btn" data-action="minus">−</button><span class="qty-val">1</span><button class="qty-btn" data-action="plus">+</button></div></div>
-              <div class="pedido-item"><div class="pedido-item-top"><input type="checkbox" value="Mondeo (30 CUP)"><span>🚬 Mondeo</span></div><div class="pedido-qty-row"><button class="qty-btn" data-action="minus">−</button><span class="qty-val">1</span><button class="qty-btn" data-action="plus">+</button></div></div>
-            </div>
+            <div class="pedido-items" id="pedidoItems"></div>
           </div>
           <div><label class="pedido-label">Tu dirección / edificio</label><textarea class="pedido-input" id="pedidoDireccion" rows="2" placeholder="Ej: Edificio 12, apto 3B, entre calles..."></textarea></div>
           <div><label class="pedido-label">Tu nombre</label><input type="text" class="pedido-input" id="pedidoNombre" placeholder="¿Cómo te llamamos?"></div>
@@ -374,76 +450,19 @@
     </div>
   </section>
 </div>
-<nav class="bottom-nav">
+
+  <nav class="bottom-nav">
   <button class="nav-tab active" data-section="inicio"><i class="fas fa-home"></i>Inicio</button>
   <button class="nav-tab" data-section="domicilios"><i class="fas fa-motorcycle"></i>Domicilios</button>
   <button class="nav-tab" data-section="eventos"><i class="fas fa-calendar-star"></i>Eventos</button>
   <button class="nav-tab" data-section="entretenimiento"><i class="fas fa-gamepad"></i>Jugar</button>
 </nav>
 
-<div class="gojo-wrapper" id="gojoWrapper">
-  <div class="gojo-bubble" id="gojoBubble"><span class="bubble-name">Gojo Satoru</span><span id="gojoText">∞ Limitless ∞</span></div>
-  <svg class="gojo-svg" viewBox="0 0 90 125" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <radialGradient id="sixEyesGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00e5ff" stop-opacity="0.9"/><stop offset="60%" stop-color="#7b2fff" stop-opacity="0.5"/><stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/></radialGradient>
-      <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f8f8ff"/><stop offset="50%" stop-color="#e8e8f8"/><stop offset="100%" stop-color="#d0d0e8"/></linearGradient>
-      <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#f8d5b2"/><stop offset="100%" stop-color="#e8b898"/></linearGradient>
-      <linearGradient id="uniformGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#16213e"/><stop offset="100%" stop-color="#0a0a1a"/></linearGradient>
-      <radialGradient id="auraGrad" cx="50%" cy="80%" r="60%"><stop offset="0%" stop-color="#7b2fff" stop-opacity="0.3"/><stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/></radialGradient>
-      <radialGradient id="eyeGrad" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#88ffff"/><stop offset="40%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#0088cc"/></radialGradient>
-    </defs>
-    <ellipse cx="45" cy="95" rx="32" ry="20" fill="url(#auraGrad)" opacity="0.7"/>
-    <circle cx="45" cy="48" r="28" fill="url(#sixEyesGlow)" opacity="0.15"/>
-    <path d="M20 75 L20 118 Q45 122 70 118 L70 75 Q58 68 45 67 Q32 68 20 75Z" fill="url(#uniformGrad)"/>
-    <path d="M33 72 L33 82 L45 86 L57 82 L57 72 L45 70Z" fill="#1a1a35"/>
-    <path d="M33 72 L28 65 L38 69 L33 82Z" fill="#1e1e40" stroke="#2a2a55" stroke-width="0.5"/>
-    <path d="M57 72 L62 65 L52 69 L57 82Z" fill="#1e1e40" stroke="#2a2a55" stroke-width="0.5"/>
-    <line x1="45" y1="74" x2="45" y2="118" stroke="rgba(255,255,255,0.06)" stroke-width="0.8"/>
-    <circle cx="45" cy="82" r="1.2" fill="rgba(255,255,255,0.2)"/>
-    <circle cx="45" cy="89" r="1.2" fill="rgba(255,255,255,0.2)"/>
-    <circle cx="45" cy="96" r="1.2" fill="rgba(255,255,255,0.2)"/>
-    <path d="M20 76 Q10 80 8 98 Q10 105 16 106 L20 90Z" fill="url(#uniformGrad)"/>
-    <ellipse cx="12" cy="103" rx="5" ry="4.5" fill="#f8d5b2"/>
-    <path d="M70 76 Q80 80 82 98 Q80 105 74 106 L70 90Z" fill="url(#uniformGrad)"/>
-    <ellipse cx="78" cy="103" rx="5" ry="4.5" fill="#f8d5b2"/>
-    <rect x="38" y="62" width="14" height="13" rx="3" fill="#f8d5b2"/>
-    <ellipse cx="45" cy="42" rx="23" ry="25" fill="url(#skinGrad)"/>
-    <path d="M28 48 Q27 58 35 63 Q45 67 55 63 Q63 58 62 48" fill="url(#skinGrad)"/>
-    <path d="M22 38 Q20 22 28 14 Q35 8 45 7 Q55 8 62 14 Q70 22 68 38 Q60 28 45 26 Q30 28 22 38Z" fill="url(#hairGrad)"/>
-    <path d="M22 38 Q15 32 16 20 Q20 12 28 14 Q22 20 22 38Z" fill="#f0f0ff"/>
-    <path d="M68 38 Q75 32 74 20 Q70 12 62 14 Q68 20 68 38Z" fill="#f0f0ff"/>
-    <path d="M30 26 Q28 34 30 40" stroke="#e8e8f8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M34 24 Q32 32 33 38" stroke="#f0f0ff" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M60 26 Q62 34 60 40" stroke="#e8e8f8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-    <path d="M56 24 Q58 32 57 38" stroke="#f0f0ff" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M30 25 Q38 32 45 30 Q52 32 60 25 Q52 22 45 23 Q38 22 30 25Z" fill="#e8e8f8" opacity="0.9"/>
-    <rect x="24" y="41" width="42" height="11" rx="5.5" fill="#f5f5f5" opacity="0.97"/>
-    <line x1="24" y1="44" x2="66" y2="44" stroke="rgba(200,200,210,.4)" stroke-width="0.5"/>
-    <line x1="24" y1="47" x2="66" y2="47" stroke="rgba(200,200,210,.4)" stroke-width="0.5"/>
-    <line x1="24" y1="50" x2="66" y2="50" stroke="rgba(200,200,210,.4)" stroke-width="0.5"/>
-    <rect x="24" y="41" width="42" height="11" rx="5.5" fill="none" stroke="rgba(180,180,200,.5)" stroke-width="0.8"/>
-    <ellipse cx="36" cy="46.5" rx="5.5" ry="4" fill="rgba(0,229,255,0.18)"/>
-    <ellipse cx="54" cy="46.5" rx="5.5" ry="4" fill="rgba(0,229,255,0.18)"/>
-    <ellipse cx="36" cy="46.5" rx="3" ry="2.2" fill="url(#eyeGrad)" opacity="0.7"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="54" cy="46.5" rx="3" ry="2.2" fill="url(#eyeGrad)" opacity="0.7"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.5s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="36" cy="46.5" rx="1.5" ry="1.2" fill="rgba(150,255,255,0.95)"><animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/></ellipse>
-    <ellipse cx="54" cy="46.5" rx="1.5" ry="1.2" fill="rgba(150,255,255,0.95)"><animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" begin="0.3s" repeatCount="indefinite"/></ellipse>
-    <path d="M43 54 Q45 57 47 54" stroke="#d4a070" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <path d="M37 60 Q45 66 53 60" stroke="#c08060" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M22 42 Q18 45 19 50 Q20 54 23 53 Q22 50 22 46Z" fill="#f0c8a0"/>
-    <path d="M68 42 Q72 45 71 50 Q70 54 67 53 Q68 50 68 46Z" fill="#f0c8a0"/>
-    <text x="45" y="120" text-anchor="middle" font-size="9" fill="rgba(0,229,255,0.6)" font-family="serif">∞</text>
-    <circle cx="12" cy="40" r="1.2" fill="#00e5ff"><animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/><animate attributeName="cy" values="40;30;40" dur="2s" repeatCount="indefinite"/></circle>
-    <circle cx="78" cy="35" r="1" fill="#b94fff"><animate attributeName="opacity" values="0;1;0" dur="2.5s" begin="0.8s" repeatCount="indefinite"/><animate attributeName="cy" values="35;25;35" dur="2.5s" begin="0.8s" repeatCount="indefinite"/></circle>
-    <circle cx="20" cy="70" r="0.8" fill="#00e5ff"><animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
-    <circle cx="70" cy="65" r="1" fill="#7b2fff"><animate attributeName="opacity" values="0;1;0" dur="1.8s" begin="0.4s" repeatCount="indefinite"/></circle>
-  </svg>
-                                                                                                                                     </div>
-
-  <div class="cartel-premio" id="cartelPremio"><h3>🏆 ¡Nuevo Récord!</h3><p id="premioMensaje"></p><button class="close-btn" id="btnCerrarPremio">Cerrar</button></div>
+<div class="cartel-premio" id="cartelPremio"><h3>🏆 ¡Nuevo Récord!</h3><p id="premioMensaje"></p><button class="close-btn" id="btnCerrarPremio">Cerrar</button></div>
 <div class="cartel-cierre" id="cartelCierre"><h2>🍂 La cafetería<br>ha cerrado 🍂</h2><p>Vuelve mañana · ¡Hasta pronto!</p></div>
 <button id="adminBtn"><i class="fas fa-cog"></i></button>
 
+<!-- LOGIN ADMIN -->
 <div class="admin-overlay" id="adminOverlay">
   <div class="admin-login-box">
     <h3>🔐 Panel Admin</h3><p>Ingresa el código de acceso</p>
@@ -454,55 +473,232 @@
   </div>
 </div>
 
+<!-- PANEL ADMIN -->
 <div class="admin-panel" id="adminPanel">
-  <div class="admin-header"><h2>⚙ Panel Admin</h2><button class="btn-admin-close" id="btnAdminClose">✕ Salir</button></div>
+  <div class="admin-header">
+    <h2>⚙ Panel Admin</h2>
+    <button class="btn-admin-close" id="btnAdminClose">✕ Salir</button>
+  </div>
   <div class="admin-body">
-    <div class="admin-card">
-      <div class="admin-card-title" style="color:var(--cyan)"><i class="fas fa-chart-bar"></i> Estadísticas</div>
-      <div class="stats-grid">
-        <div class="stat-box"><div class="stat-num" id="adminVHoy">0</div><div class="stat-lbl">Visitas hoy</div></div>
-        <div class="stat-box"><div class="stat-num" id="adminVTotal">0</div><div class="stat-lbl">Total visitas</div></div>
-        <div class="stat-box"><div class="stat-num" id="adminGiros">0</div><div class="stat-lbl">Partidas Tetris</div></div>
-        <div class="stat-box"><div class="stat-num" id="adminPremios">0</div><div class="stat-lbl">Mejor puntuación</div></div>
+    <!-- TABS -->
+    <div class="admin-tabs">
+      <button class="admin-tab-btn active" data-tab="resumen"><i class="fas fa-chart-pie"></i> Resumen</button>
+      <button class="admin-tab-btn" data-tab="finanzas"><i class="fas fa-coins"></i> Finanzas</button>
+      <button class="admin-tab-btn" data-tab="productos"><i class="fas fa-tags"></i> Productos</button>
+      <button class="admin-tab-btn" data-tab="inventario"><i class="fas fa-boxes"></i> Inventario</button>
+      <button class="admin-tab-btn" data-tab="ajustes"><i class="fas fa-sliders-h"></i> Ajustes</button>
+      <button class="admin-tab-btn" data-tab="backup"><i class="fas fa-database"></i> Backup</button>
+    </div>
+
+    <!-- TAB: RESUMEN -->
+    <div class="admin-tab-panel active" id="tab-resumen">
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--cyan)"><i class="fas fa-chart-line"></i> Hoy · <span id="resumenFechaHoy" style="font-size:.85rem;color:var(--muted)"></span></div>
+        <div class="fin-kpi-grid">
+          <div class="fin-kpi kpi-green"><div class="fin-kpi-val green" id="kpiIngresosHoy">0</div><div class="fin-kpi-lbl">Ingresos hoy</div></div>
+          <div class="fin-kpi kpi-red"><div class="fin-kpi-val red" id="kpiGastosHoy">0</div><div class="fin-kpi-lbl">Gastos hoy</div></div>
+          <div class="fin-kpi kpi-gold"><div class="fin-kpi-val gold" id="kpiGananciaHoy">0</div><div class="fin-kpi-lbl">Ganancia neta hoy</div></div>
+          <div class="fin-kpi kpi-cyan"><div class="fin-kpi-val cyan" id="kpiUnidadesHoy">0</div><div class="fin-kpi-lbl">Unidades vendidas</div></div>
+        </div>
       </div>
-      <br><button class="btn-admin-red" id="btnResetV">🔄 Resetear visitas de hoy</button>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--purple)"><i class="fas fa-calendar-alt"></i> Este mes · <span id="resumenMesActual" style="font-size:.85rem;color:var(--muted)"></span></div>
+        <div class="fin-kpi-grid">
+          <div class="fin-kpi kpi-green"><div class="fin-kpi-val green" id="kpiIngresosMes">0</div><div class="fin-kpi-lbl">Ingresos del mes</div></div>
+          <div class="fin-kpi kpi-red"><div class="fin-kpi-val red" id="kpiGastosMes">0</div><div class="fin-kpi-lbl">Gastos del mes</div></div>
+          <div class="fin-kpi kpi-gold"><div class="fin-kpi-val gold" id="kpiGananciaMes">0</div><div class="fin-kpi-lbl">Ganancia neta mes</div></div>
+          <div class="fin-kpi kpi-purple"><div class="fin-kpi-val purple" id="kpiMargenMes">0%</div><div class="fin-kpi-lbl">Margen bruto</div></div>
+        </div>
+        <div class="margen-bar"><div class="margen-fill" id="margenBarFill" style="width:0%"></div></div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--gold)"><i class="fas fa-trophy"></i> Acumulado total</div>
+        <div class="fin-kpi-grid">
+          <div class="fin-kpi kpi-green"><div class="fin-kpi-val green" id="kpiIngresosTotal">0</div><div class="fin-kpi-lbl">Ingresos totales</div></div>
+          <div class="fin-kpi kpi-red"><div class="fin-kpi-val red" id="kpiGastosTotal">0</div><div class="fin-kpi-lbl">Gastos totales</div></div>
+          <div class="fin-kpi kpi-gold"><div class="fin-kpi-val gold" id="kpiGananciaTotal">0</div><div class="fin-kpi-lbl">Ganancia total</div></div>
+          <div class="fin-kpi kpi-cyan"><div class="fin-kpi-val cyan" id="kpiInversionTotal">0</div><div class="fin-kpi-lbl">Inversión total</div></div>
+        </div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--cyan)"><i class="fas fa-eye"></i> Estadísticas web</div>
+        <div class="stats-grid">
+          <div class="stat-box"><div class="stat-num" id="adminVHoy">0</div><div class="stat-lbl">Visitas hoy</div></div>
+          <div class="stat-box"><div class="stat-num" id="adminVTotal">0</div><div class="stat-lbl">Total visitas</div></div>
+          <div class="stat-box"><div class="stat-num" id="adminGiros">0</div><div class="stat-lbl">Partidas Tetris</div></div>
+          <div class="stat-box"><div class="stat-num" id="adminPremios">0</div><div class="stat-lbl">Mejor puntuación</div></div>
+        </div>
+        <br><button class="btn-admin-red" id="btnResetV">🔄 Resetear visitas de hoy</button>
+      </div>
     </div>
-    <div class="admin-card">
-      <div class="admin-card-title" style="color:var(--red)"><i class="fas fa-ban"></i> Marcar Agotados</div>
-      <p style="font-size:.66rem;color:var(--muted);margin-bottom:.72rem;">Activa para marcar un producto como agotado.</p>
-      <div class="agotado-list" id="agotadoList"></div>
+
+    <!-- TAB: FINANZAS -->
+    <div class="admin-tab-panel" id="tab-finanzas">
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--green)"><i class="fas fa-plus-circle"></i> Registrar movimiento</div>
+        <div class="fin-form-row">
+          <label>Tipo</label>
+          <select class="admin-select" id="finTipo">
+            <option value="ingreso">💰 Ingreso (venta del día)</option>
+            <option value="gasto">💸 Gasto operativo</option>
+            <option value="inversion">📦 Inversión / compra de insumos</option>
+          </select>
+        </div>
+        <div class="fin-form-row">
+          <label>Categoría</label>
+          <select class="admin-select" id="finCategoria">
+            <option value="ventas">Ventas generales</option>
+            <option value="cafe">Café / bebidas</option>
+            <option value="comida">Comida / pizzas</option>
+            <option value="cigarros">Cigarros</option>
+            <option value="insumos">Insumos / materias primas</option>
+            <option value="servicios">Servicios (luz, agua, gas)</option>
+            <option value="personal">Personal / salarios</option>
+            <option value="mantenimiento">Mantenimiento / reparaciones</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+        <div class="fin-form-row">
+          <label>Monto (CUP)</label>
+          <div class="fin-input-row">
+            <input type="number" class="admin-input" id="finMonto" placeholder="0" min="0" inputmode="decimal">
+          </div>
+        </div>
+        <div class="fin-form-row">
+          <label>Unidades vendidas (solo ingresos)</label>
+          <input type="number" class="admin-input" id="finUnidades" placeholder="0" min="0" inputmode="numeric">
+        </div>
+        <div class="fin-form-row">
+          <label>Nota / descripción (opcional)</label>
+          <input type="text" class="admin-input" id="finNota" placeholder="Ej: venta tarde, compra harina...">
+        </div>
+        <button class="btn-admin-save" id="btnFinGuardar">💾 Registrar</button>
+        <div class="admin-save-ok" id="finOk">✓ Movimiento registrado</div>
+      </div>
+      <div class="admin-card">
+        <div class="mes-nav">
+          <button class="mes-nav-btn" id="btnMesAnt"><i class="fas fa-chevron-left"></i></button>
+          <span class="mes-label" id="finMesLabel">—</span>
+          <button class="mes-nav-btn" id="btnMesSig"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="admin-card-title" style="color:var(--gold);margin-bottom:.5rem"><i class="fas fa-table"></i> Historial del mes</div>
+        <div class="fin-tabla-wrap"><table class="fin-tabla" id="finTablaMovimientos">
+          <thead><tr><th>Fecha</th><th>Tipo</th><th>Categoría</th><th>Monto</th><th>Uds</th><th></th></tr></thead>
+          <tbody id="finTbody"></tbody>
+        </table></div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--cyan)"><i class="fas fa-chart-bar"></i> Resumen del mes seleccionado</div>
+        <div class="fin-kpi-grid">
+          <div class="fin-kpi kpi-green"><div class="fin-kpi-val green" id="finResIngresos">0</div><div class="fin-kpi-lbl">Ingresos</div></div>
+          <div class="fin-kpi kpi-red"><div class="fin-kpi-val red" id="finResGastos">0</div><div class="fin-kpi-lbl">Gastos</div></div>
+          <div class="fin-kpi kpi-gold"><div class="fin-kpi-val gold" id="finResGanancia">0</div><div class="fin-kpi-lbl">Ganancia neta</div></div>
+          <div class="fin-kpi kpi-purple"><div class="fin-kpi-val purple" id="finResMargen">0%</div><div class="fin-kpi-lbl">Margen bruto</div></div>
+          <div class="fin-kpi kpi-cyan"><div class="fin-kpi-val cyan" id="finResUnidades">0</div><div class="fin-kpi-lbl">Unidades vendidas</div></div>
+          <div class="fin-kpi kpi-red"><div class="fin-kpi-val" style="color:var(--red)" id="finResInversion">0</div><div class="fin-kpi-lbl">Inversión</div></div>
+        </div>
+      </div>
     </div>
-    <div class="admin-card">
-      <div class="admin-card-title" style="color:var(--gold)"><i class="fas fa-clock"></i> Horario</div>
-      <div class="horario-row"><label>Apertura</label><input type="time" id="horaApertura" value="07:00"></div>
-      <div class="horario-row"><label>Cierre</label><input type="time" id="horaCierre" value="02:00"></div>
-      <button class="btn-admin-save" id="btnGuardarHorario">💾 Guardar horario</button>
-      <div class="admin-save-ok" id="horarioOk">✓ Horario guardado</div>
+
+    <!-- TAB: PRODUCTOS -->
+    <div class="admin-tab-panel" id="tab-productos">
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--pink)"><i class="fas fa-tag"></i> Precios de venta</div>
+        <p class="admin-card-subtitle">Edita el precio de cada producto y guarda.</p>
+        <div class="prod-admin-list" id="prodAdminList"></div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--red)"><i class="fas fa-ban"></i> Marcar agotados</div>
+        <p class="admin-card-subtitle">Activa para mostrar "Agotado" en el menú.</p>
+        <div class="agotado-list" id="agotadoList"></div>
+      </div>
+                                           </div>
+
+        <!-- TAB: INVENTARIO -->
+    <div class="admin-tab-panel" id="tab-inventario">
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--gold)"><i class="fas fa-boxes"></i> Stock e inventario</div>
+        <p class="admin-card-subtitle">Registra el stock disponible de cada producto.</p>
+        <div class="prod-admin-list" id="invAdminList"></div>
+        <br><button class="btn-admin-save" id="btnGuardarInventario">💾 Guardar inventario</button>
+        <div class="admin-save-ok" id="invOk">✓ Inventario guardado</div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--cyan)"><i class="fas fa-chart-pie"></i> Costos por producto</div>
+        <p class="admin-card-subtitle">¿Cuánto te cuesta producir / comprar cada uno?</p>
+        <div class="prod-admin-list" id="costAdminList"></div>
+        <br><button class="btn-admin-save" id="btnGuardarCostos">💾 Guardar costos</button>
+        <div class="admin-save-ok" id="costOk">✓ Costos guardados</div>
+      </div>
     </div>
-    <div class="admin-card">
-      <div class="admin-card-title" style="color:#25d366"><i class="fab fa-whatsapp"></i> Número WhatsApp</div>
-      <p style="font-size:.68rem;color:var(--muted);margin-bottom:.62rem;">Sin + ni espacios. Ej: 5351946649</p>
-      <input type="tel" class="admin-input" id="adminWaNum" placeholder="5351946649" inputmode="numeric">
-      <button class="btn-admin-save" id="btnGuardarWa">💾 Guardar número</button>
-      <div class="admin-save-ok" id="waOk">✓ Número guardado</div>
+
+    <!-- TAB: AJUSTES -->
+    <div class="admin-tab-panel" id="tab-ajustes">
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--gold)"><i class="fas fa-clock"></i> Horario</div>
+        <div class="horario-row"><label>Apertura</label><input type="time" id="horaApertura" value="19:00"></div>
+        <div class="horario-row"><label>Cierre</label><input type="time" id="horaCierre" value="02:00"></div>
+        <button class="btn-admin-save" id="btnGuardarHorario">💾 Guardar horario</button>
+        <div class="admin-save-ok" id="horarioOk">✓ Horario guardado</div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:#25d366"><i class="fab fa-whatsapp"></i> Número WhatsApp</div>
+        <p style="font-size:.68rem;color:var(--muted);margin-bottom:.62rem;">Sin + ni espacios. Ej: 5351946649</p>
+        <input type="tel" class="admin-input" id="adminWaNum" placeholder="5351946649" inputmode="numeric">
+        <button class="btn-admin-save" id="btnGuardarWa">💾 Guardar número</button>
+        <div class="admin-save-ok" id="waOk">✓ Número guardado</div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--cyan)"><i class="fas fa-calendar-plus"></i> Gestión de Eventos</div>
+        <p style="font-size:.68rem;color:var(--muted);margin-bottom:.75rem;">Agrega, edita o elimina eventos.</p>
+        <input type="text" class="admin-input" id="adminEventoTitulo" placeholder="Título del evento">
+        <input type="date" class="admin-input" id="adminEventoFecha" style="color-scheme:dark;">
+        <textarea class="admin-textarea" id="adminEventoDesc" placeholder="Descripción para los usuarios..."></textarea>
+        <label class="admin-file-label" for="adminEventoImg"><i class="fas fa-image"></i> Subir imagen (opcional)</label>
+        <input type="file" id="adminEventoImg" accept="image/*">
+        <img id="adminImgPreview" class="img-preview" alt="Preview">
+        <button class="btn-admin-save" id="btnAgregarEvento">➕ Agregar Evento</button>
+        <div class="admin-save-ok" id="eventoOk">✓ Evento agregado</div>
+        <div style="font-size:.62rem;color:var(--muted);letter-spacing:.1em;margin:.85rem 0 .38rem;">EVENTOS ACTUALES</div>
+        <div class="eventos-admin-list" id="adminEventosList"></div>
+      </div>
     </div>
-    <div class="admin-card">
-      <div class="admin-card-title" style="color:var(--cyan)"><i class="fas fa-calendar-plus"></i> Gestión de Eventos</div>
-      <p style="font-size:.68rem;color:var(--muted);margin-bottom:.75rem;">Agrega, edita o elimina eventos.</p>
-      <input type="text" class="admin-input" id="adminEventoTitulo" placeholder="Título del evento">
-      <input type="date" class="admin-input" id="adminEventoFecha" style="color-scheme:dark;">
-      <textarea class="admin-textarea" id="adminEventoDesc" placeholder="Descripción para los usuarios..."></textarea>
-      <label class="admin-file-label" for="adminEventoImg"><i class="fas fa-image"></i> Subir imagen (opcional)</label>
-      <input type="file" id="adminEventoImg" accept="image/*">
-      <img id="adminImgPreview" class="img-preview" alt="Preview">
-      <button class="btn-admin-save" id="btnAgregarEvento">➕ Agregar Evento</button>
-      <div class="admin-save-ok" id="eventoOk">✓ Evento agregado</div>
-      <div style="font-size:.62rem;color:var(--muted);letter-spacing:.1em;margin:.85rem 0 .38rem;">EVENTOS ACTUALES</div>
-      <div class="eventos-admin-list" id="adminEventosList"></div>
+
+    <!-- TAB: BACKUP -->
+    <div class="admin-tab-panel" id="tab-backup">
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--cyan)"><i class="fas fa-download"></i> Exportar datos</div>
+        <p class="backup-info">Descarga un archivo con <strong>todos los datos financieros</strong> del Manikato. Puedes importarlo en otro celular para tener los datos sincronizados.</p>
+        <div class="btn-row">
+          <button class="btn-admin-cyan" id="btnExportarBackup"><i class="fas fa-download"></i> Descargar backup</button>
+          <button class="btn-admin-gold" id="btnExportarCSV"><i class="fas fa-file-csv"></i> Exportar CSV</button>
+        </div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--gold)"><i class="fas fa-upload"></i> Importar datos</div>
+        <p class="backup-info">Carga un archivo de backup previamente descargado. <strong>¡Cuidado!</strong> Esto reemplazará los datos actuales en este dispositivo.</p>
+        <div class="backup-dropzone" id="backupDropzone">
+          <i class="fas fa-file-import"></i>
+          <span>Toca para seleccionar el archivo backup (.json)</span>
+        </div>
+        <input type="file" id="backupFileInput" accept=".json">
+        <br>
+        <div class="admin-save-ok" id="importOk">✓ Datos importados correctamente</div>
+        <div class="admin-pin-error" id="importError" style="display:none">Error al importar. Verifica el archivo.</div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-card-title" style="color:var(--red)"><i class="fas fa-trash-alt"></i> Zona de peligro</div>
+        <p style="font-size:.7rem;color:var(--muted);margin-bottom:.8rem;">Estas acciones son irreversibles. Úsalas con precaución.</p>
+        <div class="btn-row">
+          <button class="btn-admin-red" id="btnBorrarFinanzas">🗑 Borrar finanzas</button>
+          <button class="btn-admin-red" id="btnBorrarTodo">💣 Borrar TODO</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- MODAL EDITAR EVENTO -->
 <div class="edit-modal" id="editModal">
   <div class="edit-modal-box">
     <h3>✏ Editar Evento</h3>
@@ -518,21 +714,32 @@
       <button class="btn-edit-save" id="btnEditSave">💾 Guardar</button>
     </div>
   </div>
-  </div>
+</div>
 
-  <script>
+<script>
 (function(){
 'use strict';
+// ── STORAGE ──────────────────────────────────────────────────────────
 function lsGet(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v);}catch(e){return d;}}
 function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+
+// ── CONSTANTES ────────────────────────────────────────────────────────
 const COLORS=['#ff2d6e','#00e5ff','#b94fff','#ffd700','#ff9a3c'];
 const ADMIN_PIN='2356';
+const MESES=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+
 const PRODUCTOS=[
-  {id:'cafe',emoji:'☕',nombre:'Café'},{id:'cortado',emoji:'☕',nombre:'Cortado'},
-  {id:'pizza',emoji:'🍕',nombre:'Pizza de queso'},{id:'salchicha',emoji:'🌭',nombre:'Pan con salchicha'},
-  {id:'minuta',emoji:'🍔',nombre:'Pan con minuta'},{id:'refresco',emoji:'🥤',nombre:'Refresco de vaso'},
-  {id:'rojo',emoji:'🚬',nombre:'Popular Rojo'},{id:'mondeo',emoji:'🚬',nombre:'Mondeo'},
+  {id:'cafe',  emoji:'☕', nombre:'Café',          desc:'negro / americano',       precio:20, costo:8,  categoria:'cafe'},
+  {id:'cortado',emoji:'☕',nombre:'Cortado',        desc:'café + leche condensada', precio:30, costo:12, categoria:'cafe'},
+  {id:'pizza', emoji:'🍕', nombre:'Pizza de queso', desc:'mozzarella, orégano',     precio:130,costo:60, categoria:'comida'},
+  {id:'salchicha',emoji:'🌭',nombre:'Pan con salchicha',desc:'salchicha tipo frankfurt',precio:120,costo:55,categoria:'comida'},
+  {id:'minuta',emoji:'🍔', nombre:'Pan con minuta', desc:'milanesa de carne',       precio:200,costo:90, categoria:'comida'},
+  {id:'refresco',emoji:'🥤',nombre:'Refresco de vaso',desc:'cola / naranja / limón',precio:20,costo:8,  categoria:'cafe'},
+  {id:'rojo',  emoji:'🚬', nombre:'Popular Rojo',   desc:'cigarro · fuerte',        precio:30, costo:15, categoria:'cigarros'},
+  {id:'mondeo',emoji:'🚬', nombre:'Mondeo',         desc:'cigarro · suave',         precio:30, costo:15, categoria:'cigarros'},
 ];
+
+// ── PARTÍCULAS ───────────────────────────────────────────────────────
 const pEl=document.getElementById('particles');
 function crearP(){
   const p=document.createElement('div');p.className='particle';
@@ -542,6 +749,8 @@ function crearP(){
 }
 for(let i=0;i<18;i++)setTimeout(crearP,i*400);
 setInterval(crearP,2500);
+
+ // ── VISITAS ───────────────────────────────────────────────────────────
 (function(){
   const hoy=new Date().toISOString().slice(0,10);
   let m=lsGet('mani_visitas',{fecha:'',hoy:0,total:0});
@@ -550,11 +759,13 @@ setInterval(crearP,2500);
   document.getElementById('visitasNum').textContent=m.hoy;
   document.getElementById('visitasTotal').textContent=m.total;
 })();
+
+// ── RELOJ ─────────────────────────────────────────────────────────────
 let notif60=false,notif15=false;
 const notifEl=document.getElementById('notifHorario');
 const notifTxt=document.getElementById('notifTexto');
 const cartelCierre=document.getElementById('cartelCierre');
-function getHorario(){return{apertura:lsGet('mani_apertura','07:00'),cierre:lsGet('mani_cierre','02:00')};}
+function getHorario(){return{apertura:lsGet('mani_apertura','19:00'),cierre:lsGet('mani_cierre','02:00')};}
 function toMin(s){const[h,m]=s.split(':').map(Number);return h*60+m;}
 function actualizarReloj(){
   const ahora=new Date();
@@ -567,15 +778,19 @@ function actualizarReloj(){
   document.getElementById('f-mes').textContent=g('month');
   document.getElementById('f-anio').textContent=g('year');
   const sem=g('weekday');document.getElementById('dia-semana').textContent=sem.charAt(0).toUpperCase()+sem.slice(1);
-  if(parseInt(h)===2&&parseInt(m)===0)cartelCierre.classList.add('activo');
-  else cartelCierre.classList.remove('activo');
+  const hi=parseInt(h),mi=parseInt(m);
   const{cierre}=getHorario();
-  const diff=(toMin(cierre)-parseInt(h)*60-parseInt(m)+1440)%1440;
+  const[hc]=cierre.split(':').map(Number);
+  if(hi===hc&&mi===0)cartelCierre.classList.add('activo');
+  else cartelCierre.classList.remove('activo');
+  const diff=(toMin(cierre)-(hi*60+mi)+1440)%1440;
   if(diff===60&&!notif60){notif60=true;notifEl.className='notif-horario show warn';notifTxt.textContent=`⚠ La cafetería cierra en 1 hora (${cierre})`;setTimeout(()=>notifEl.classList.remove('show'),30000);}
   if(diff===15&&!notif15){notif15=true;notifEl.className='notif-horario show cierre';notifTxt.textContent='🔴 ¡Quedan 15 minutos para el cierre!';setTimeout(()=>notifEl.classList.remove('show'),20000);}
-  if(parseInt(h)===12&&parseInt(m)===0){notif60=false;notif15=false;}
+  if(hi===12&&mi===0){notif60=false;notif15=false;}
 }
 actualizarReloj();setInterval(actualizarReloj,1000);
+
+// ── NAVEGACIÓN ────────────────────────────────────────────────────────
 function mostrarSeccion(nombre){
   document.querySelectorAll('.page-section').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
@@ -586,12 +801,30 @@ function mostrarSeccion(nombre){
   if(nombre==='inicio')setTimeout(animarCards,100);
 }
 document.querySelectorAll('.nav-tab').forEach(tab=>tab.addEventListener('click',()=>mostrarSeccion(tab.dataset.section)));
+
+// ── CARDS ANIMACIÓN ───────────────────────────────────────────────────
 function animarCards(){
   document.querySelectorAll('.product-card').forEach((c,i)=>setTimeout(()=>c.classList.add('visible'),70+i*65));
 }
 const gridEl=document.getElementById('menuGrid');
 const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){animarCards();io.disconnect();}},{threshold:.05});
 io.observe(gridEl);setTimeout(animarCards,380);
+
+// ── PRECIOS ───────────────────────────────────────────────────────────
+function getPrecio(id){
+  const precios=lsGet('mani_precios',{});
+  const prod=PRODUCTOS.find(p=>p.id===id);
+  return precios[id]!==undefined?precios[id]:(prod?prod.precio:0);
+}
+function cargarPrecios(){
+  PRODUCTOS.forEach(p=>{
+    const el=document.getElementById('precio-'+p.id);
+    if(el)el.innerHTML=`${getPrecio(p.id)} <span class="cup">CUP</span>`;
+  });
+}
+cargarPrecios();
+
+// ── AGOTADOS ─────────────────────────────────────────────────────────
 function cargarAgotados(){
   const ag=lsGet('mani_agotados',[]);
   document.querySelectorAll('.product-card').forEach(c=>c.classList.toggle('agotado',ag.includes(c.dataset.id)));
@@ -602,28 +835,41 @@ function toggleAgotado(id,on){
   if(on){if(!ag.includes(id))ag.push(id);}else ag=ag.filter(x=>x!==id);
   lsSet('mani_agotados',ag);cargarAgotados();
 }
+
+// ── DOMICILIOS ────────────────────────────────────────────────────────
+function renderPedidoItems(){
+  const cont=document.getElementById('pedidoItems');
+  cont.innerHTML='';
+  PRODUCTOS.forEach(p=>{
+    const precio=getPrecio(p.id);
+    const div=document.createElement('div');div.className='pedido-item';
+    div.innerHTML=`<div class="pedido-item-top"><input type="checkbox" value="${p.nombre} (${precio} CUP)"><span>${p.emoji} ${p.nombre}</span></div><div class="pedido-qty-row"><button class="qty-btn" data-action="minus">−</button><span class="qty-val">1</span><button class="qty-btn" data-action="plus">+</button></div>`;
+    const cb=div.querySelector('input[type=checkbox]');
+    let qty=1;
+    const qv=div.querySelector('.qty-val');
+    div.querySelector('.pedido-item-top').addEventListener('click',e=>{if(e.target!==cb){cb.checked=!cb.checked;div.classList.toggle('sel',cb.checked);}});
+    cb.addEventListener('change',()=>div.classList.toggle('sel',cb.checked));
+    div.querySelector('[data-action="minus"]').addEventListener('click',e=>{e.stopPropagation();if(qty>1){qty--;qv.textContent=qty;}});
+    div.querySelector('[data-action="plus"]').addEventListener('click',e=>{e.stopPropagation();qty++;qv.textContent=qty;});
+    div._getQty=()=>qty;
+    cont.appendChild(div);
+  });
+}
+renderPedidoItems();
+
 let domAbierto=false;
 document.getElementById('domToggleBtn').addEventListener('click',()=>{
   domAbierto=!domAbierto;
   document.getElementById('domContent').classList.toggle('open',domAbierto);
   document.getElementById('domChevron').classList.toggle('open',domAbierto);
 });
-document.querySelectorAll('.pedido-item').forEach(item=>{
-  const cb=item.querySelector('input[type=checkbox]');
-  const qv=item.querySelector('.qty-val');
-  let qty=1;
-  item.querySelector('.pedido-item-top').addEventListener('click',e=>{if(e.target!==cb){cb.checked=!cb.checked;item.classList.toggle('sel',cb.checked);}});
-  cb.addEventListener('change',()=>item.classList.toggle('sel',cb.checked));
-  item.querySelector('[data-action="minus"]').addEventListener('click',e=>{e.stopPropagation();if(qty>1){qty--;qv.textContent=qty;}});
-  item.querySelector('[data-action="plus"]').addEventListener('click',e=>{e.stopPropagation();qty++;qv.textContent=qty;});
-  item._getQty=()=>qty;
-});
+
 document.getElementById('btnWhatsapp').addEventListener('click',()=>{
   const rawNum=lsGet('mani_wa_numero','')||'';
   const num=rawNum.replace(/[\s\+\-\(\)]/g,'')||'5351946649';
   if(!num||num.length<7){alert('El número de WhatsApp no está configurado.');return;}
   const sel=[];
-  document.querySelectorAll('.pedido-items .pedido-item').forEach(item=>{
+  document.querySelectorAll('#pedidoItems .pedido-item').forEach(item=>{
     const cb=item.querySelector('input[type=checkbox]');
     if(cb.checked)sel.push(`  • ${cb.value} x${item._getQty()}`);
   });
@@ -634,6 +880,8 @@ document.getElementById('btnWhatsapp').addEventListener('click',()=>{
   const msg=`🛵 *PEDIDO A DOMICILIO - MANIKATO*\n\n👤 Cliente: ${nom||'Sin nombre'}\n📍 Dirección: ${dir}\n\n🛍 Pedido:\n${sel.join('\n')}\n\n_Enviado desde manikato.github.io_`;
   window.open(`https://wa.me/${num}?text=${encodeURIComponent(msg)}`,'_blank');
 });
+
+// ── CONFETI ───────────────────────────────────────────────────────────
 function confeti(n){
   for(let i=0;i<n;i++){
     const c=document.createElement('div');c.className='confeti-piece';
@@ -645,36 +893,15 @@ const cartelPremio=document.getElementById('cartelPremio');
 const premioMsg=document.getElementById('premioMensaje');
 document.getElementById('btnCerrarPremio').addEventListener('click',()=>cartelPremio.classList.remove('show'));
 function mostrarPremio(txt){premioMsg.textContent=txt;cartelPremio.classList.add('show');}
-const gojoW=document.getElementById('gojoWrapper'),gojoB=document.getElementById('gojoText');
-const GOJO_FRASES=[
-  '¿El más fuerte? No, el único fuerte. Hay diferencia. 💜',
-  'El universo entero no alcanza para contenerme. ∞',
-  'No te rindas. Aunque... tú no eres yo, así que quizás sí ríndate. 😏',
-  '¿Límites? Eso es para los débiles. Yo soy el Infinito. ✦',
-  'Hoy vas a comerte la mejor pizza del universo. Lo sé, soy el más fuerte. 🍕',
-  'La técnica del Vacío Morado... o sea, este café. Ambos queman igual. ☕',
-  'Con un café del Manikato hasta yo podría enseñar en el Colegio Jujutsu. 😌',
-  '¿Expansión de dominio? Esto es una cafetería, aquí el dominio es mío. ∞',
-  'Soy demasiado poderoso para preocuparme... pero tú sí pide tu pedido. 🛵',
-  '¡Ojo divino activado! Veo que necesitas un cortado. Te conozco. 👁️',
-  'Limitless significa sin límites. Como los pedidos a domicilio. ✨',
-  'El más fuerte no necesita esforzarse... tú sí. ¡Ánimo! 💪',
-  'Nada ni nadie puede tocarme. Excepto una buena pizza de queso. 🍕',
-  '¿Sabes por qué soy invencible? Porque nunca falto al desayuno. ☕',
-  'Técnica: Infinito. Resultado: el mejor café de La Habana. ∞',
-];
-function mostrarGojo(){
-  gojoB.textContent=GOJO_FRASES[Math.floor(Math.random()*GOJO_FRASES.length)];
-  gojoW.classList.add('visible');
-  setTimeout(()=>gojoW.classList.remove('visible'),6000);
-}
-  setTimeout(mostrarGojo,5000);setInterval(mostrarGojo,28000);
-gojoW.addEventListener('click',()=>{gojoW.classList.remove('visible');setTimeout(mostrarGojo,200);});
+
+// ── ANDINAS ───────────────────────────────────────────────────────────
 const andinasIcon=document.getElementById('andinasIcon');
 function animarAndinas(){andinasIcon.style.animation='none';void andinasIcon.offsetWidth;andinasIcon.style.animation='spinV .8s ease-out';}
 document.getElementById('andinasBadge').addEventListener('click',animarAndinas);
 setInterval(animarAndinas,15000);
-function formatFecha(f){if(!f)return '';const[y,m,d]=f.split('-');const M=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];return `${d} ${M[parseInt(m)-1]} ${y}`;}
+
+// ── EVENTOS ───────────────────────────────────────────────────────────
+function formatFecha(f){if(!f)return '';const[y,m,d]=f.split('-');return `${d} ${MESES[parseInt(m)-1]} ${y}`;}
 function renderEventos(){
   const evs=lsGet('mani_eventos',[]);
   const grid=document.getElementById('eventosGrid');
@@ -689,6 +916,8 @@ function renderEventos(){
   });
 }
 renderEventos();
+
+// ── ADMIN: ACCESO ─────────────────────────────────────────────────────
 const adminBtn=document.getElementById('adminBtn');
 const adminOverlay=document.getElementById('adminOverlay');
 const adminPanel=document.getElementById('adminPanel');
@@ -706,13 +935,199 @@ function tryLogin(){
 }
 document.getElementById('btnAdminLogin').addEventListener('click',tryLogin);
 adminPin.addEventListener('keydown',e=>{if(e.key==='Enter')tryLogin();});
+
+ // ── ADMIN: TABS ───────────────────────────────────────────────────────
+document.querySelectorAll('.admin-tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.admin-tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.admin-tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+    if(btn.dataset.tab==='finanzas')renderFinTabla();
+    if(btn.dataset.tab==='resumen')actualizarResumen();
+    if(btn.dataset.tab==='productos')renderProdAdmin();
+    if(btn.dataset.tab==='inventario')renderInventarioAdmin();
+  });
+});
+
+// ── ADMIN: ABRIR ──────────────────────────────────────────────────────
 function abrirAdmin(){
   adminPanel.classList.add('show');
+  // Resumen
   const m=lsGet('mani_visitas',{hoy:0,total:0});
   document.getElementById('adminVHoy').textContent=m.hoy||0;
   document.getElementById('adminVTotal').textContent=m.total||0;
   document.getElementById('adminGiros').textContent=lsGet('mani_tetris_partidas',0);
   document.getElementById('adminPremios').textContent=lsGet('mani_tetris_best',0);
+  actualizarResumen();
+  // Agotados
+  renderAgotadoList();
+  // Productos
+  renderProdAdmin();
+  // Inventario
+  renderInventarioAdmin();
+  // Horario
+  const{apertura,cierre}=getHorario();
+  document.getElementById('horaApertura').value=apertura;
+  document.getElementById('horaCierre').value=cierre;
+  // WhatsApp
+  document.getElementById('adminWaNum').value=lsGet('mani_wa_numero','')||'';
+  // Eventos
+  renderAdminEventos();
+  // Finanzas
+  renderFinTabla();
+}
+document.getElementById('btnAdminClose').addEventListener('click',()=>adminPanel.classList.remove('show'));
+
+// ── ADMIN: RESUMEN ────────────────────────────────────────────────────
+function fmt(n){return Math.round(n).toLocaleString('es-CU');}
+function actualizarResumen(){
+  const hoy=new Date().toISOString().slice(0,10);
+  const mesActual=hoy.slice(0,7);
+  const movs=lsGet('mani_movimientos',[]);
+
+  // Hoy
+  const movsHoy=movs.filter(m=>m.fecha===hoy);
+  const ingHoy=movsHoy.filter(m=>m.tipo==='ingreso').reduce((a,m)=>a+m.monto,0);
+  const gasHoy=movsHoy.filter(m=>m.tipo==='gasto'||m.tipo==='inversion').reduce((a,m)=>a+m.monto,0);
+  const udsHoy=movsHoy.filter(m=>m.tipo==='ingreso').reduce((a,m)=>a+(m.unidades||0),0);
+  document.getElementById('kpiIngresosHoy').textContent=fmt(ingHoy)+' CUP';
+  document.getElementById('kpiGastosHoy').textContent=fmt(gasHoy)+' CUP';
+  document.getElementById('kpiGananciaHoy').textContent=fmt(ingHoy-gasHoy)+' CUP';
+  document.getElementById('kpiUnidadesHoy').textContent=udsHoy;
+  document.getElementById('resumenFechaHoy').textContent=formatFechaCorta(hoy);
+
+  // Mes
+  const movsMes=movs.filter(m=>m.fecha.startsWith(mesActual));
+  const ingMes=movsMes.filter(m=>m.tipo==='ingreso').reduce((a,m)=>a+m.monto,0);
+  const gasMes=movsMes.filter(m=>m.tipo==='gasto').reduce((a,m)=>a+m.monto,0);
+  const invMes=movsMes.filter(m=>m.tipo==='inversion').reduce((a,m)=>a+m.monto,0);
+  const ganMes=ingMes-gasMes-invMes;
+  const margenMes=ingMes>0?Math.round((ganMes/ingMes)*100):0;
+  document.getElementById('kpiIngresosMes').textContent=fmt(ingMes)+' CUP';
+  document.getElementById('kpiGastosMes').textContent=fmt(gasMes+invMes)+' CUP';
+  document.getElementById('kpiGananciaMes').textContent=fmt(ganMes)+' CUP';
+  document.getElementById('kpiMargenMes').textContent=margenMes+'%';
+  document.getElementById('margenBarFill').style.width=Math.max(0,Math.min(100,margenMes))+'%';
+  document.getElementById('resumenMesActual').textContent=MESES[parseInt(mesActual.slice(5,7))-1]+' '+mesActual.slice(0,4);
+
+  // Total
+  const ingTot=movs.filter(m=>m.tipo==='ingreso').reduce((a,m)=>a+m.monto,0);
+  const gasTot=movs.filter(m=>m.tipo==='gasto').reduce((a,m)=>a+m.monto,0);
+  const invTot=movs.filter(m=>m.tipo==='inversion').reduce((a,m)=>a+m.monto,0);
+  document.getElementById('kpiIngresosTotal').textContent=fmt(ingTot)+' CUP';
+  document.getElementById('kpiGastosTotal').textContent=fmt(gasTot)+' CUP';
+  document.getElementById('kpiGananciaTotal').textContent=fmt(ingTot-gasTot-invTot)+' CUP';
+  document.getElementById('kpiInversionTotal').textContent=fmt(invTot)+' CUP';
+}
+function formatFechaCorta(f){if(!f)return '';const[y,m,d]=f.split('-');return `${d}/${m}/${y}`;}
+
+// ── ADMIN: FINANZAS ───────────────────────────────────────────────────
+let finMesVista=new Date().toISOString().slice(0,7);
+function actualizarMesLabel(){
+  const[y,m]=finMesVista.split('-');
+  document.getElementById('finMesLabel').textContent=MESES[parseInt(m)-1]+' '+y;
+}
+actualizarMesLabel();
+document.getElementById('btnMesAnt').addEventListener('click',()=>{
+  const d=new Date(finMesVista+'-01');d.setMonth(d.getMonth()-1);
+  finMesVista=d.toISOString().slice(0,7);actualizarMesLabel();renderFinTabla();
+});
+document.getElementById('btnMesSig').addEventListener('click',()=>{
+  const d=new Date(finMesVista+'-01');d.setMonth(d.getMonth()+1);
+  finMesVista=d.toISOString().slice(0,7);actualizarMesLabel();renderFinTabla();
+});
+
+document.getElementById('btnFinGuardar').addEventListener('click',()=>{
+  const tipo=document.getElementById('finTipo').value;
+  const cat=document.getElementById('finCategoria').value;
+  const monto=parseFloat(document.getElementById('finMonto').value)||0;
+  const uds=parseInt(document.getElementById('finUnidades').value)||0;
+  const nota=document.getElementById('finNota').value.trim();
+  if(monto<=0){alert('Ingresa un monto válido.');return;}
+  const movs=lsGet('mani_movimientos',[]);
+  const hoy=new Date().toISOString().slice(0,10);
+  movs.push({id:Date.now(),fecha:hoy,tipo,categoria:cat,monto,unidades:uds,nota});
+  lsSet('mani_movimientos',movs);
+  document.getElementById('finMonto').value='';
+  document.getElementById('finUnidades').value='';
+  document.getElementById('finNota').value='';
+  const ok=document.getElementById('finOk');ok.classList.add('show');setTimeout(()=>ok.classList.remove('show'),2500);
+  renderFinTabla();actualizarResumen();
+});
+
+ function renderFinTabla(){
+  const movs=lsGet('mani_movimientos',[]).filter(m=>m.fecha.startsWith(finMesVista));
+  const tbody=document.getElementById('finTbody');
+  if(!movs.length){tbody.innerHTML=`<tr><td colspan="6" class="fin-empty">Sin movimientos este mes</td></tr>`;limpiarResumenMes();return;}
+  tbody.innerHTML='';
+  [...movs].reverse().forEach(m=>{
+    const tr=document.createElement('tr');
+    const badgeClass=m.tipo==='ingreso'?'ingreso':m.tipo==='inversion'?'inversion':'gasto';
+    const montoClass=m.tipo==='ingreso'?'pos':'neg';
+    tr.innerHTML=`<td>${formatFechaCorta(m.fecha)}</td><td><span class="fin-badge ${badgeClass}">${m.tipo}</span></td><td style="color:var(--muted);font-size:.64rem">${m.categoria}</td><td class="num ${montoClass}">${m.tipo==='ingreso'?'+':'−'}${fmt(m.monto)}</td><td class="num cyan">${m.unidades||'—'}</td><td><button class="fin-del-btn" data-id="${m.id}"><i class="fas fa-times"></i></button></td>`;
+    tbody.appendChild(tr);
+  });
+  tbody.querySelectorAll('.fin-del-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      if(!confirm('¿Eliminar este movimiento?'))return;
+      const id=parseInt(btn.dataset.id);
+      let ms=lsGet('mani_movimientos',[]);ms=ms.filter(x=>x.id!==id);
+      lsSet('mani_movimientos',ms);renderFinTabla();actualizarResumen();
+    });
+  });
+  // Resumen mes
+  const ing=movs.filter(m=>m.tipo==='ingreso').reduce((a,m)=>a+m.monto,0);
+  const gas=movs.filter(m=>m.tipo==='gasto').reduce((a,m)=>a+m.monto,0);
+  const inv=movs.filter(m=>m.tipo==='inversion').reduce((a,m)=>a+m.monto,0);
+  const gan=ing-gas-inv;
+  const mar=ing>0?Math.round((gan/ing)*100):0;
+  const uds=movs.filter(m=>m.tipo==='ingreso').reduce((a,m)=>a+(m.unidades||0),0);
+  document.getElementById('finResIngresos').textContent=fmt(ing)+' CUP';
+  document.getElementById('finResGastos').textContent=fmt(gas)+' CUP';
+  document.getElementById('finResGanancia').textContent=fmt(gan)+' CUP';
+  document.getElementById('finResMargen').textContent=mar+'%';
+  document.getElementById('finResUnidades').textContent=uds;
+  document.getElementById('finResInversion').textContent=fmt(inv)+' CUP';
+}
+function limpiarResumenMes(){
+  ['finResIngresos','finResGastos','finResGanancia','finResMargen','finResUnidades','finResInversion'].forEach(id=>{
+    document.getElementById(id).textContent=id==='finResMargen'?'0%':'0 CUP';
+  });
+  document.getElementById('finResUnidades').textContent='0';
+}
+
+// ── ADMIN: PRODUCTOS ──────────────────────────────────────────────────
+function renderProdAdmin(){
+  const lista=document.getElementById('prodAdminList');
+  lista.innerHTML='';
+  const precios=lsGet('mani_precios',{});
+  PRODUCTOS.forEach(p=>{
+    const precio=precios[p.id]!==undefined?precios[p.id]:p.precio;
+    const row=document.createElement('div');row.className='prod-admin-row';
+    row.innerHTML=`<span class="prod-admin-emoji">${p.emoji}</span><div class="prod-admin-info"><div class="prod-admin-name">${p.nombre}</div><div class="prod-admin-precio" id="pa-precio-lbl-${p.id}">${precio} CUP</div></div><input type="number" class="prod-precio-input" value="${precio}" min="0" data-id="${p.id}"><button class="prod-save-btn" data-id="${p.id}">✓ OK</button>`;
+    lista.appendChild(row);
+  });
+  lista.querySelectorAll('.prod-save-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const id=btn.dataset.id;
+      const inp=lista.querySelector(`input[data-id="${id}"]`);
+      const val=parseFloat(inp.value)||0;
+      const precios=lsGet('mani_precios',{});
+      precios[id]=val;
+      lsSet('mani_precios',precios);
+      document.getElementById('pa-precio-lbl-'+id).textContent=val+' CUP';
+      // Actualizar menú
+      const elMenu=document.getElementById('precio-'+id);
+      if(elMenu)elMenu.innerHTML=`${val} <span class="cup">CUP</span>`;
+      // Actualizar pedido items
+      renderPedidoItems();
+      btn.textContent='✅';setTimeout(()=>btn.textContent='✓ OK',1200);
+    });
+  });
+}
+
+function renderAgotadoList(){
   const ag=lsGet('mani_agotados',[]);
   const lista=document.getElementById('agotadoList');lista.innerHTML='';
   PRODUCTOS.forEach(p=>{
@@ -721,13 +1136,50 @@ function abrirAdmin(){
     lista.appendChild(row);
   });
   lista.querySelectorAll('input').forEach(cb=>cb.addEventListener('change',()=>toggleAgotado(cb.dataset.pid,cb.checked)));
-  const{apertura,cierre}=getHorario();
-  document.getElementById('horaApertura').value=apertura;
-  document.getElementById('horaCierre').value=cierre;
-  document.getElementById('adminWaNum').value=lsGet('mani_wa_numero','')||'';
-  renderAdminEventos();
 }
-document.getElementById('btnAdminClose').addEventListener('click',()=>adminPanel.classList.remove('show'));
+
+// ── ADMIN: INVENTARIO ─────────────────────────────────────────────────
+function renderInventarioAdmin(){
+  const inv=lsGet('mani_inventario',{});
+  const lista=document.getElementById('invAdminList');
+  lista.innerHTML='';
+  PRODUCTOS.forEach(p=>{
+    const stock=inv[p.id]!==undefined?inv[p.id]:0;
+    const row=document.createElement('div');row.className='prod-admin-row';
+    row.innerHTML=`<span class="prod-admin-emoji">${p.emoji}</span><div class="prod-admin-info"><div class="prod-admin-name">${p.nombre}</div><div class="prod-admin-precio" style="color:${stock<=2?'var(--red)':stock<=5?'var(--gold)':'var(--green)'}">Stock: ${stock} uds</div></div><input type="number" class="prod-precio-input" value="${stock}" min="0" data-id="${p.id}" style="border-color:rgba(255,215,0,.3);color:var(--gold)">`;
+    lista.appendChild(row);
+  });
+  const costos=lsGet('mani_costos',{});
+  const clista=document.getElementById('costAdminList');
+  clista.innerHTML='';
+  PRODUCTOS.forEach(p=>{
+    const costo=costos[p.id]!==undefined?costos[p.id]:p.costo;
+    const row=document.createElement('div');row.className='prod-admin-row';
+    row.innerHTML=`<span class="prod-admin-emoji">${p.emoji}</span><div class="prod-admin-info"><div class="prod-admin-name">${p.nombre}</div><div class="prod-admin-precio" style="color:var(--gold)">Costo: ${costo} CUP</div></div><input type="number" class="prod-cost-input" value="${costo}" min="0" data-id="${p.id}">`;
+    clista.appendChild(row);
+  });
+}
+document.getElementById('btnGuardarInventario').addEventListener('click',()=>{
+  const inv={};
+  document.querySelectorAll('#invAdminList input[data-id]').forEach(inp=>{inv[inp.dataset.id]=parseFloat(inp.value)||0;});
+  lsSet('mani_inventario',inv);
+  renderInventarioAdmin();
+  const ok=document.getElementById('invOk');ok.classList.add('show');setTimeout(()=>ok.classList.remove('show'),2000);
+});
+document.getElementById('btnGuardarCostos').addEventListener('click',()=>{
+  const costos={};
+  document.querySelectorAll('#costAdminList input[data-id]').forEach(inp=>{costos[inp.dataset.id]=parseFloat(inp.value)||0;});
+  lsSet('mani_costos',costos);
+  renderInventarioAdmin();
+  const ok=document.getElementById('costOk');ok.classList.add('show');setTimeout(()=>ok.classList.remove('show'),2000);
+});
+
+// ── ADMIN: AJUSTES ────────────────────────────────────────────────────
+document.getElementById('btnResetV').addEventListener('click',()=>{
+  if(!confirm('¿Resetear las visitas de hoy?'))return;
+  const m=lsGet('mani_visitas',{fecha:'',hoy:0,total:0});m.hoy=0;lsSet('mani_visitas',m);
+  document.getElementById('visitasNum').textContent=0;document.getElementById('adminVHoy').textContent=0;
+});
 document.getElementById('btnGuardarHorario').addEventListener('click',()=>{
   lsSet('mani_apertura',document.getElementById('horaApertura').value);
   lsSet('mani_cierre',document.getElementById('horaCierre').value);
@@ -740,13 +1192,8 @@ document.getElementById('btnGuardarWa').addEventListener('click',()=>{
   document.getElementById('adminWaNum').value=cleaned;
   const ok=document.getElementById('waOk');ok.classList.add('show');setTimeout(()=>ok.classList.remove('show'),2500);
 });
-document.getElementById('btnResetV').addEventListener('click',()=>{
-  if(!confirm('¿Resetear las visitas de hoy?'))return;
-  const m=lsGet('mani_visitas',{fecha:'',hoy:0,total:0});
-  m.hoy=0;lsSet('mani_visitas',m);
-  document.getElementById('visitasNum').textContent=0;
-  document.getElementById('adminVHoy').textContent=0;
-});
+
+ // ── ADMIN: EVENTOS ────────────────────────────────────────────────────
 const adminImgInput=document.getElementById('adminEventoImg');
 const adminImgPreview=document.getElementById('adminImgPreview');
 adminImgInput.addEventListener('change',()=>{
@@ -762,14 +1209,12 @@ document.getElementById('btnAgregarEvento').addEventListener('click',()=>{
   const evs=lsGet('mani_eventos',[]);
   evs.unshift({id:Date.now(),titulo,fecha,descripcion:desc,img:imgSrc});
   lsSet('mani_eventos',evs);
-  document.getElementById('adminEventoTitulo').value='';
-  document.getElementById('adminEventoFecha').value='';
-  document.getElementById('adminEventoDesc').value='';
+  document.getElementById('adminEventoTitulo').value='';document.getElementById('adminEventoFecha').value='';document.getElementById('adminEventoDesc').value='';
   adminImgPreview.src='';adminImgPreview.style.display='none';adminImgInput.value='';
   const ok=document.getElementById('eventoOk');ok.classList.add('show');setTimeout(()=>ok.classList.remove('show'),2500);
   renderAdminEventos();renderEventos();
 });
-  function renderAdminEventos(){
+function renderAdminEventos(){
   const evs=lsGet('mani_eventos',[]);
   const lista=document.getElementById('adminEventosList');
   if(!evs.length){lista.innerHTML='<p style="font-size:.68rem;color:var(--muted);">No hay eventos creados.</p>';return;}
@@ -782,20 +1227,15 @@ document.getElementById('btnAgregarEvento').addEventListener('click',()=>{
   lista.querySelectorAll('.btn-ev-del').forEach(btn=>{
     btn.addEventListener('click',()=>{
       if(!confirm('¿Eliminar este evento?'))return;
-      const id=parseInt(btn.dataset.id);
-      let evs=lsGet('mani_eventos',[]);evs=evs.filter(e=>e.id!==id);
+      const id=parseInt(btn.dataset.id);let evs=lsGet('mani_eventos',[]);evs=evs.filter(e=>e.id!==id);
       lsSet('mani_eventos',evs);renderAdminEventos();renderEventos();
     });
   });
   lista.querySelectorAll('.btn-ev-edit').forEach(btn=>{
     btn.addEventListener('click',()=>{
-      const id=parseInt(btn.dataset.id);
-      const evs=lsGet('mani_eventos',[]);
-      const ev=evs.find(e=>e.id===id);if(!ev)return;
-      document.getElementById('editEventoId').value=ev.id;
-      document.getElementById('editEventoTitulo').value=ev.titulo;
-      document.getElementById('editEventoFecha').value=ev.fecha||'';
-      document.getElementById('editEventoDesc').value=ev.descripcion;
+      const id=parseInt(btn.dataset.id);const evs=lsGet('mani_eventos',[]);const ev=evs.find(e=>e.id===id);if(!ev)return;
+      document.getElementById('editEventoId').value=ev.id;document.getElementById('editEventoTitulo').value=ev.titulo;
+      document.getElementById('editEventoFecha').value=ev.fecha||'';document.getElementById('editEventoDesc').value=ev.descripcion;
       const ep=document.getElementById('editImgPreview');
       if(ev.img){ep.src=ev.img;ep.style.display='block';}else{ep.src='';ep.style.display='none';}
       document.getElementById('editModal').classList.add('show');
@@ -815,15 +1255,68 @@ document.getElementById('btnEditSave').addEventListener('click',()=>{
   const fecha=document.getElementById('editEventoFecha').value;
   const desc=document.getElementById('editEventoDesc').value.trim();
   if(!titulo||!desc){alert('Título y descripción son obligatorios.');return;}
-  let evs=lsGet('mani_eventos',[]);
-  const idx=evs.findIndex(e=>e.id===id);if(idx<0)return;
+  let evs=lsGet('mani_eventos',[]);const idx=evs.findIndex(e=>e.id===id);if(idx<0)return;
   const imgSrc=editImgPreview.style.display!=='none'&&editImgPreview.src?editImgPreview.src:evs[idx].img;
   evs[idx]={...evs[idx],titulo,fecha,descripcion:desc,img:imgSrc};
-  lsSet('mani_eventos',evs);
-  document.getElementById('editModal').classList.remove('show');
-  editImgInput.value='';
+  lsSet('mani_eventos',evs);document.getElementById('editModal').classList.remove('show');editImgInput.value='';
   renderAdminEventos();renderEventos();
 });
+
+// ── BACKUP / EXPORT ───────────────────────────────────────────────────
+document.getElementById('btnExportarBackup').addEventListener('click',()=>{
+  const keys=['mani_movimientos','mani_precios','mani_costos','mani_inventario','mani_agotados','mani_eventos','mani_visitas','mani_apertura','mani_cierre','mani_wa_numero','mani_tetris_best','mani_tetris_partidas'];
+  const backup={version:1,fecha:new Date().toISOString(),datos:{}};
+  keys.forEach(k=>{backup.datos[k]=lsGet(k,null);});
+  const blob=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download=`manikato_backup_${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(a.href);
+});
+
+document.getElementById('btnExportarCSV').addEventListener('click',()=>{
+  const movs=lsGet('mani_movimientos',[]);
+  if(!movs.length){alert('No hay movimientos para exportar.');return;}
+  const header='Fecha,Tipo,Categoría,Monto (CUP),Unidades,Nota';
+  const rows=movs.map(m=>`${m.fecha},${m.tipo},${m.categoria},${m.monto},${m.unidades||0},"${(m.nota||'').replace(/"/g,"'")}"`);
+  const csv=[header,...rows].join('\n');
+  const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download=`manikato_finanzas_${new Date().toISOString().slice(0,10)}.csv`;
+  document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(a.href);
+});
+
+document.getElementById('backupDropzone').addEventListener('click',()=>document.getElementById('backupFileInput').click());
+document.getElementById('backupFileInput').addEventListener('change',e=>{
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{
+    try{
+      const data=JSON.parse(ev.target.result);
+      if(!data.datos)throw new Error('Formato inválido');
+      if(!confirm('¿Importar este backup? Se reemplazarán los datos actuales en este dispositivo.'))return;
+      Object.entries(data.datos).forEach(([k,v])=>{if(v!==null)lsSet(k,v);});
+      const ok=document.getElementById('importOk');ok.classList.add('show');setTimeout(()=>ok.classList.remove('show'),3000);
+      abrirAdmin();cargarPrecios();cargarAgotados();renderEventos();renderPedidoItems();
+    }catch(err){
+      const er=document.getElementById('importError');er.style.display='block';setTimeout(()=>er.style.display='none',3000);
+    }
+  };
+  r.readAsText(f);
+  e.target.value='';
+});
+
+document.getElementById('btnBorrarFinanzas').addEventListener('click',()=>{
+  if(!confirm('¿Eliminar TODOS los datos financieros? Esta acción es irreversible.'))return;
+  lsSet('mani_movimientos',[]);actualizarResumen();renderFinTabla();
+  alert('Datos financieros eliminados.');
+});
+document.getElementById('btnBorrarTodo').addEventListener('click',()=>{
+  if(!confirm('⚠ ¿BORRAR ABSOLUTAMENTE TODO? Precios, finanzas, eventos, inventario... Todo se perderá.'))return;
+  if(!confirm('Última confirmación. ¿Estás seguro?'))return;
+  localStorage.clear();location.reload();
+});
+
+ // ── TETRIS ────────────────────────────────────────────────────────────
 const canvas=document.getElementById('tetrisCanvas');
 const ctx=canvas.getContext('2d');
 function calcSize(){
@@ -857,13 +1350,7 @@ const elLines=document.getElementById('tLines');
 function initBoard(){return Array.from({length:TS.ROWS},()=>Array(TS.COLS).fill(null));}
 function randPiece(){const keys=Object.keys(TP);const k=keys[Math.floor(Math.random()*keys.length)];return{shape:TP[k],color:TC[k]};}
 function rotate(mat){return mat[0].map((_,i)=>mat.map(r=>r[i]).reverse());}
-function valid(shape,ox,oy){
-  return shape.every((row,dy)=>row.every((v,dx)=>{
-    if(!v)return true;
-    const nx=ox+dx,ny=oy+dy;
-    return nx>=0&&nx<TS.COLS&&ny<TS.ROWS&&(ny<0||!board[ny][nx]);
-  }));
-}
+function valid(shape,ox,oy){return shape.every((row,dy)=>row.every((v,dx)=>{if(!v)return true;const nx=ox+dx,ny=oy+dy;return nx>=0&&nx<TS.COLS&&ny<TS.ROWS&&(ny<0||!board[ny][nx]);}));}
 function place(){
   curPiece.forEach((row,dy)=>row.forEach((v,dx)=>{if(v&&curY+dy>=0)board[curY+dy][curX+dx]=curColor;}));
   let cleared=0;
@@ -881,12 +1368,11 @@ function place(){
     if(score>best)lsSet('mani_tetris_best',score);
   }
   spawn();
-    }
-  function spawn(){
+}
+function spawn(){
   const p=nextPiece||randPiece();
   curPiece=p.shape;curColor=p.color;
-  curX=Math.floor(TS.COLS/2)-Math.floor(curPiece[0].length/2);
-  curY=-1;
+  curX=Math.floor(TS.COLS/2)-Math.floor(curPiece[0].length/2);curY=-1;
   nextPiece=randPiece();
   if(!valid(curPiece,curX,curY+1)&&!valid(curPiece,curX,curY)){endGame();}
 }
@@ -903,37 +1389,24 @@ function draw(){
   board.forEach((row,r)=>row.forEach((col,c)=>{if(col)drawCell(c,r,col);}));
   let ghostY=curY;
   while(valid(curPiece,curX,ghostY+1))ghostY++;
-  if(ghostY!==curY){
-    curPiece.forEach((row,dy)=>row.forEach((v,dx)=>{
-      if(v&&ghostY+dy>=0){ctx.fillStyle='rgba(255,255,255,0.08)';ctx.fillRect((curX+dx)*TS.B+1,(ghostY+dy)*TS.B+1,TS.B-2,TS.B-2);}
-    }));
-  }
+  if(ghostY!==curY){curPiece.forEach((row,dy)=>row.forEach((v,dx)=>{if(v&&ghostY+dy>=0){ctx.fillStyle='rgba(255,255,255,0.08)';ctx.fillRect((curX+dx)*TS.B+1,(ghostY+dy)*TS.B+1,TS.B-2,TS.B-2);}}));}
   curPiece.forEach((row,dy)=>row.forEach((v,dx)=>{if(v&&curY+dy>=0)drawCell(curX+dx,curY+dy,curColor);}));
 }
 function drop(){if(valid(curPiece,curX,curY+1))curY++;else place();}
-function loop(ts=0){
-  if(!gameRunning)return;
-  if(ts-lastTime>dropInterval){lastTime=ts;drop();}
-  draw();animId=requestAnimationFrame(loop);
-}
+function loop(ts=0){if(!gameRunning)return;if(ts-lastTime>dropInterval){lastTime=ts;drop();}draw();animId=requestAnimationFrame(loop);}
 function startGame(){
   TS=calcSize();canvas.width=TS.W;canvas.height=TS.H;
   board=initBoard();score=0;level=1;lines=0;dropInterval=800;
   elScore.textContent=0;elLevel.textContent=1;elLines.textContent=0;
-  gameRunning=true;
-  lsSet('mani_tetris_partidas',lsGet('mani_tetris_partidas',0)+1);
-  nextPiece=null;spawn();
-  overlay.style.display='none';
-  lastTime=performance.now();
-  if(animId)cancelAnimationFrame(animId);
-  animId=requestAnimationFrame(loop);
+  gameRunning=true;lsSet('mani_tetris_partidas',lsGet('mani_tetris_partidas',0)+1);
+  nextPiece=null;spawn();overlay.style.display='none';lastTime=performance.now();
+  if(animId)cancelAnimationFrame(animId);animId=requestAnimationFrame(loop);
 }
 function endGame(){
   gameRunning=false;cancelAnimationFrame(animId);
   overlayTitle.textContent='😢 Fin del juego';
   overlayMsg.innerHTML=`Puntuación: <strong style="color:var(--gold)">${score}</strong><br>Nivel alcanzado: ${level}`;
-  btnStart.textContent='🔄 Jugar de nuevo';
-  overlay.style.display='flex';
+  btnStart.textContent='🔄 Jugar de nuevo';overlay.style.display='flex';
   const best=lsGet('mani_tetris_best',0);
   if(score>best){lsSet('mani_tetris_best',score);confeti(60);mostrarPremio(`¡Nuevo récord: ${score} puntos! 🏆`);}
 }
@@ -947,13 +1420,8 @@ canvas.addEventListener('touchstart',e=>{tx0=e.touches[0].clientX;ty0=e.touches[
 canvas.addEventListener('touchend',e=>{
   if(!gameRunning)return;
   const dx=e.changedTouches[0].clientX-tx0,dy=e.changedTouches[0].clientY-ty0;
-  if(Math.abs(dx)>Math.abs(dy)){
-    if(dx>18&&valid(curPiece,curX+1,curY))curX++;
-    else if(dx<-18&&valid(curPiece,curX-1,curY))curX--;
-  }else{
-    if(dy>18){while(valid(curPiece,curX,curY+1))curY++;drop();}
-    else if(dy<-18){const r=rotate(curPiece);if(valid(r,curX,curY))curPiece=r;}
-  }
+  if(Math.abs(dx)>Math.abs(dy)){if(dx>18&&valid(curPiece,curX+1,curY))curX++;else if(dx<-18&&valid(curPiece,curX-1,curY))curX--;}
+  else{if(dy>18){while(valid(curPiece,curX,curY+1))curY++;drop();}else if(dy<-18){const r=rotate(curPiece);if(valid(r,curX,curY))curPiece=r;}}
 },{passive:true});
 document.addEventListener('keydown',e=>{
   if(!gameRunning)return;
@@ -963,11 +1431,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowDown'){while(valid(curPiece,curX,curY+1))curY++;drop();e.preventDefault();}
   else if(e.key===' '){while(valid(curPiece,curX,curY+1))curY++;drop();e.preventDefault();}
 });
-(function(){
-  ctx.fillStyle='rgba(7,10,15,0.97)';ctx.fillRect(0,0,TS.W,TS.H);
-  ctx.strokeStyle='rgba(255,255,255,0.035)';ctx.lineWidth=.5;
-  for(let r=0;r<20;r++)for(let c=0;c<10;c++)ctx.strokeRect(c*TS.B,r*TS.B,TS.B,TS.B);
-})();
+(function(){ctx.fillStyle='rgba(7,10,15,0.97)';ctx.fillRect(0,0,TS.W,TS.H);ctx.strokeStyle='rgba(255,255,255,0.035)';ctx.lineWidth=.5;for(let r=0;r<20;r++)for(let c=0;c<10;c++)ctx.strokeRect(c*TS.B,r*TS.B,TS.B,TS.B);})();
 })();
 </script>
 </body>
